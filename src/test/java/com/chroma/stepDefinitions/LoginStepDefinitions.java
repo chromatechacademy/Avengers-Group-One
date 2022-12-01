@@ -35,4 +35,13 @@ public class LoginStepDefinitions extends PageInitializer {
 
     }
 
+    @Then("user sees Invalid Username or Password message")
+    public void user_sees_Invalid_Username_or_Password_message() {
+        boolean isInvalidUsernameOrPasswordTextDisplayed = loginPage.invalidUsernameOrPasswordText.isDisplayed();
+        Assert.assertTrue(isInvalidUsernameOrPasswordTextDisplayed);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
+        
+    }
+
 }
