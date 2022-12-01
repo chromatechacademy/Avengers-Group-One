@@ -1,11 +1,9 @@
 package com.chroma.stepDefinitions;
 
-import org.openqa.selenium.By;
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.web.WebDriverUtils;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
 /*
  * Avengers group one 
  * CTSMS Student admission 
@@ -16,22 +14,18 @@ public class StudentStepDefinitions extends PageInitializer {
     @When("creates a new student")
     public void creates_a_new_student() {
         dashboardPage.studentInformationMenuButton.click();
-        WebDriverUtils.driver.findElement(By.xpath("//*[@id='class_id']"));
+       
     }
 
     @When("user creates admission with an existing number")
     public void user_creates_admission_with_an_existing_number() {
-        WebDriverUtils.driver.findElement(By.xpath("//*[@id='DataTables_Table_0']/tbody/tr[1]/td[1]"));
-
-        
+         
     }
 
     @Then("user gets an error message requiring unique admission number")
     public void user_gets_an_error_message_requiring_unique_admission_number() {
         
-
-
-    }
+     }
 
     @When("user navigates to student details")
     public void user_navigates_to_student_details() {
