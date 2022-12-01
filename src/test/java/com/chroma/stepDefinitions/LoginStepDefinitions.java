@@ -20,8 +20,8 @@ public class LoginStepDefinitions extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
     }
 
-    @When("user logs in with email {string} and paswword {string}")
-    public void user_logs_in_with_email_and_paswword(String username, String password) throws InterruptedException {
+    @When("user logs in with email {string} and password {string}")
+    public void user_logs_in_with_email_and_password(String username, String password) throws InterruptedException {
         LoginStepsImpl.login(username, password);
         Thread.sleep(6000);
     }

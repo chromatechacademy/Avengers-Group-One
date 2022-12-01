@@ -12,6 +12,9 @@ public class DashboardPage {
     @FindBy(xpath = "//span[normalize-space()='Chroma Tech Academy']")
     public WebElement chromaTechAcademyText;
 
+    @FindBy(xpath = "(//*[contains(text(),'Student Information')])[1]")
+    public WebElement studentInformationMenuButton;
+
     public DashboardPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
