@@ -1,12 +1,12 @@
 Feature: Validate agent module text
 
-  @Progression
+  @Smoke
   Scenario: Navigating to agents page
     Given an admin user is on the Real Estate login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php"
     When user logs in with username "admin@mexil.it" and password "123456"
     Then user is navigated to the agents page
 
-  @AGO-45_Reshad
+  @AGO-45_Reshad @Progression
   Scenario: Creating a new agent
     Given an admin user is on the Real Estate login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php"
     When user logs in with username "admin@mexil.it" and password "123456"
