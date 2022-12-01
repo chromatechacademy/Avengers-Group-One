@@ -10,8 +10,8 @@ import cucumber.api.junit.Cucumber;
 		"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  }, 
 		features = "src/test/java/com/chroma/features", 
 		glue = "com.chroma.stepDefinitions", 
-		tags = "Regression", 
-		dryRun =  false, 
+		tags = "@AGO-16", 
+		dryRun =false, 
 		monochrome = true, 
 		strict = true
 )
