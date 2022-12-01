@@ -23,6 +23,7 @@ public class StudentStepDefinitions extends PageInitializer {
     public void user_creates_admission_with_an_existing_number() {
         WebDriverUtils.driver.findElement(By.xpath("//*[@id='DataTables_Table_0']/tbody/tr[1]/td[1]"));
 
+        
     }
 
     @Then("user gets an error message requiring unique admission number")
