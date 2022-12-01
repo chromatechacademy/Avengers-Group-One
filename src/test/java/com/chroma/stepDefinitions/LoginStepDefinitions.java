@@ -1,12 +1,11 @@
 package com.chroma.stepDefinitions;
 
 import org.testng.Assert;
-
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.stepsImplementation.LoginStepsImpl;
 import com.chroma.utils.CucumberLogUtils;
+import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -20,10 +19,10 @@ public class LoginStepDefinitions extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
     }
 
-    @When("user logs in with email {string} and paswword {string}")
-    public void user_logs_in_with_email_and_paswword(String username, String password) throws InterruptedException {
+    @When("user logs in with email {string} and password {string}")
+    public void user_logs_in_with_email_and_password(String username, String password) {
         LoginStepsImpl.login(username, password);
-        Thread.sleep(6000);
+        CommonUtils.sleep(5000);
     }
 
     @Then("user is directed to dashboard page")
@@ -32,7 +31,6 @@ public class LoginStepDefinitions extends PageInitializer {
         Assert.assertTrue(isChromaTechTextDisplayed);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
-
     }
 
     @Then("user sees Invalid Username or Password message")
@@ -41,7 +39,6 @@ public class LoginStepDefinitions extends PageInitializer {
         Assert.assertTrue(isInvalidUsernameOrPasswordTextDisplayed);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
-        
     }
 
 }
