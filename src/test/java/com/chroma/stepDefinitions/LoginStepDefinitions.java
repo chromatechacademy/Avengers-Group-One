@@ -21,21 +21,21 @@ public class LoginStepDefinitions extends PageInitializer {
     @When("user logs in with email {string} and password {string}")
     public void user_logs_in_with_email_and_password(String username, String password) {
         LoginStepsImpl.login(username, password);
-        CommonUtils.sleep(5000);
+        CommonUtils.sleep(2000);
     }
 
-    @Then("user is directed to dashboard page")
-    public void user_is_directed_to_dashboard_page() {
-        boolean isChromaTechTextDisplayed = dashboardPage.chromaTechAcademyText.isDisplayed();
-        Assert.assertTrue(isChromaTechTextDisplayed);
+    @Then("user is directed to dashboard page and sees {string} text")
+    public void user_is_directed_to_dashboard_page_and_sees_text(String successfulLoginText) {
+        String isChromaTechTextDisplayed = dashboardPage.chromaTechAcademyText.getText();
+        CommonUtils.assertEquals(successfulLoginText, isChromaTechTextDisplayed);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
 
-    @Then("user sees Invalid Username or Password message")
-    public void user_sees_Invalid_Username_or_Password_message() {
-        boolean isInvalidUsernameOrPasswordTextDisplayed = loginPage.invalidUsernameOrPasswordText.isDisplayed();
-        Assert.assertTrue(isInvalidUsernameOrPasswordTextDisplayed);
+    @Then("user sees {string} message")
+    public void user_sees_message(String invalidUsernameOrPasswordText) {
+        String isInvalidUsernameOrPasswordTextDisplayed = loginPage.invalidUsernameOrPasswordText.getText();
+        CommonUtils.assertEquals(invalidUsernameOrPasswordText, isInvalidUsernameOrPasswordTextDisplayed);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
