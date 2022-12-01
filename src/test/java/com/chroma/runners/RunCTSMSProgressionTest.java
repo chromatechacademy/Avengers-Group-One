@@ -1,5 +1,6 @@
 package com.chroma.runners;
 
+import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -10,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 		"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  }, 
 		features = "src/test/java/com/chroma/features", 
 		glue = "com.chroma.stepDefinitions", 
-		tags = "@Progression", 
+		tags = "@AGO-45_Reshad",
 		dryRun =  false, 
 		monochrome = true, 
 		strict = true
