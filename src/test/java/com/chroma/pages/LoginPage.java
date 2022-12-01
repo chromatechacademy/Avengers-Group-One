@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class LoginPage {
-
     /* Username Text Box */
     @FindBy(xpath = "//input[@placeholder='Username']")
     public WebElement userNameTextBox;
@@ -24,7 +23,6 @@ public class LoginPage {
     public WebElement invalidUsernameOrPasswordText;
 
     public LoginPage() {
-
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 

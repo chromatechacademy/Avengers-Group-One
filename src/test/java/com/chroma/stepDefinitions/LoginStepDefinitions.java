@@ -11,7 +11,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class LoginStepDefinitions extends PageInitializer {
-
     @Given("a user is on the {string} Homepage")
     public void a_user_is_on_the_Homepage(String url) {
         WebDriverUtils.driver.get(url);
@@ -40,5 +39,4 @@ public class LoginStepDefinitions extends PageInitializer {
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
-
 }
