@@ -36,15 +36,7 @@ public class StudentDetailsPage extends PageInitializer {
     @FindBy(xpath = "//select[@name='reason']")
     public WebElement selectReason;
 
-
-
-
-
-    
-
-
    
-
     public StudentDetailsPage() {
 
         PageFactory.initElements(WebDriverUtils.driver, this);
