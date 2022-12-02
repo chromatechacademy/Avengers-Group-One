@@ -14,7 +14,7 @@ public class AcademicsClassPage {
     @FindBy(xpath = "//a[normalize-space()='Class']")
     public WebElement classButton;
 
-    // Textbox input for Classe Name 
+    // Textbox input for Class Name 
     @FindBy(xpath = "//input[@name='class']")
     public WebElement classNameTextBox;
 
@@ -26,7 +26,7 @@ public class AcademicsClassPage {
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public WebElement classSaveButton;
 
-    // Xpath to verify that the created Class in the in Class List by using isElementDisplayed() method
+    // Xpath to verify that the created Class in the in Class List by using assertequals method
     @FindBy(xpath = "//td[normalize-space()='Sample Class']")
     public WebElement isElementDisplayedClassLocator;
 

@@ -75,7 +75,7 @@ public class AcademicsClassAndSectionsStepDef extends PageInitializer {
      */
     @When("the new created {string} Class should be in the Class List")
     public void the_new_created_Class_should_be_in_the_Class_List(String expectedClassName) {
-        AcademicsClassAndSectionStepImpl.isTheNewClassDisplayed();
+        AcademicsClassAndSectionStepImpl.isTheNewClassDisplayed(expectedClassName);
     }
 
      /*

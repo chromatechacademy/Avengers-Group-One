@@ -61,8 +61,9 @@ public class AcademicsClassAndSectionStepImpl extends PageInitializer {
         academicsClassPage.classSaveButton.click();
     }
 
-    public static void isTheNewClassDisplayed() {
-        CommonUtils.isElementDisplayed(academicsClassPage.isElementDisplayedClassLocator);
+    public static void isTheNewClassDisplayed(String expectedClassName) {
+        String actualText = academicsClassPage.isElementDisplayedClassLocator.getText();
+        CommonUtils.assertEquals(expectedClassName, actualText);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
