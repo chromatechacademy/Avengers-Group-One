@@ -11,6 +11,7 @@ public class DashboardPage {
     @FindBy(xpath = "//span[normalize-space()='Chroma Tech Academy']")
     public WebElement chromaTechAcademyText;
 
+    /* Student information */
     @FindBy(xpath = "(//*[contains(text(),'Student Information')])[1]")
     public WebElement studentInformationMenuButton;
 
