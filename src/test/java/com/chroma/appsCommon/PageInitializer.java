@@ -4,6 +4,7 @@ import com.chroma.pages.DashboardPage;
 import com.chroma.pages.LoginPage;
 import com.chroma.pages.StudentCategoriesPage;
 import com.chroma.pages.StudentDetailsPage;
+import com.chroma.stepsImplementation.EnablingStepImpl;
 import com.chroma.pages.StudentAdmissionPage;
 import com.chroma.web.WebDriverUtils;
 
@@ -14,6 +15,7 @@ public class PageInitializer extends WebDriverUtils {
     public static StudentDetailsPage studentDetails;
     public static StudentAdmissionPage studentAdmissionPage;
     public static BulkDeletePage bulkDeletePage;
+    public static EnablingStepImpl enablingStepImpl;
 
     public void initializeAllPages() {
         loginPage = new LoginPage();
@@ -22,5 +24,6 @@ public class PageInitializer extends WebDriverUtils {
         studentCategoriesPage = new StudentCategoriesPage();
         studentAdmissionPage = new StudentAdmissionPage();
         bulkDeletePage = new BulkDeletePage();
+        enablingStepImpl = new EnablingStepImpl();
     }
 }
