@@ -23,7 +23,5 @@ public class BulkDeleteStepImpl extends PageInitializer {
         BulkDeletePage.checkBoxToDelete.click();
         BulkDeletePage.deleteButton.click();
         WebDriverUtils.driver.switchTo().alert().accept();
-
     }
-
 }

@@ -65,5 +65,4 @@ public class StudentAdmissionPage {
 
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-
 }
