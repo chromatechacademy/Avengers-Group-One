@@ -1,6 +1,4 @@
 package com.chroma.stepDefinitions;
-
-import org.testng.Assert;
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.stepsImplementation.LoginStepsImpl;
 import com.chroma.utils.CucumberLogUtils;
