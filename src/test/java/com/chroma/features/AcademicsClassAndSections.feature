@@ -1,7 +1,7 @@
 Feature: Testing Academic Module Dropdowns
 
   @Progression @AOG-18 @AOG-17 @james
-  Scenario: Testing the add and delete function for Classes
+  Scenario: Testing the add and delete function for Classes and Sections
     Given a user is on the "https://chroma.mexil.it/site/login" Homepage
     When user logs in with email "general@teacher.com" and password "123456"
     And user clicks on Academic module
