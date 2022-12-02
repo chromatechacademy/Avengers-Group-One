@@ -30,7 +30,7 @@ public class AcademicsSectionsPage {
     // Delete button of the Section created
     @FindBy(xpath = "//*[contains(text(),'Sample Section')]//parent::tr/child::td[2]/a[2]")
     public WebElement deleteButtonForCreatedSection;
-
+    
     public AcademicsSectionsPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }

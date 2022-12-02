@@ -67,7 +67,7 @@ public class AcademicsClassAndSectionsStepDef extends PageInitializer {
     @When("user clicks Save button so the new Class can be added to the Class List")
     public void user_clicks_Save_button_so_the_new_Class_can_be_added_to_the_Class_List() {
         AcademicsClassAndSectionStepImpl.saveButtonClickForClass();
-        
+
     }
 
     /*
@@ -78,7 +78,7 @@ public class AcademicsClassAndSectionsStepDef extends PageInitializer {
         AcademicsClassAndSectionStepImpl.isTheNewClassDisplayed(expectedClassName);
     }
 
-     /*
+    /*
      * User can delete the Class
      */
     @When("the user is able to delete the created class name {string}")
@@ -91,7 +91,8 @@ public class AcademicsClassAndSectionsStepDef extends PageInitializer {
      */
     @Then("the user can also delete the Section")
     public void the_user_can_also_delete_the_Section() {
-        AcademicsClassAndSectionStepImpl.deletingCreatedSections();;
+        AcademicsClassAndSectionStepImpl.deletingCreatedSections();
+        ;
     }
 
 }
