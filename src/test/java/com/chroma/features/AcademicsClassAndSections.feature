@@ -11,6 +11,6 @@ Feature: Testing Academic Module Dropdowns
     And user enters the name of the Class "Sample Class" and user selects the checkboxes of Sections
     And user clicks Save button so the new Class can be added to the Class List
     And the new created "Sample Class" Class should be in the Class List
-    And the user is able to delete the Class
+    And the user is able to delete the created class name "Sample Class"
     Then the user can also delete the Section
 

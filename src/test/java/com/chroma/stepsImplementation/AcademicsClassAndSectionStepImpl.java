@@ -1,12 +1,19 @@
 package com.chroma.stepsImplementation;
 
+import static org.junit.Assert.assertNotEquals;
+
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.AcademicsSectionsPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
+
+import cucumber.api.java.an.E;
 
 public class AcademicsClassAndSectionStepImpl extends PageInitializer {
 
@@ -45,9 +52,9 @@ public class AcademicsClassAndSectionStepImpl extends PageInitializer {
 
     public static void creatingAClass(String className) {
         academicsClassPage.classNameTextBox.sendKeys(className);
+        academicsClassPage.checkboxOfCreatedSection.click();
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
-        academicsClassPage.checkboxOfCreatedSection.click();
     }
 
     public static void saveButtonClickForClass() {
@@ -60,9 +67,13 @@ public class AcademicsClassAndSectionStepImpl extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
     }
 
-    public static void deletingCreatedClass() {
+    public static void deletingCreatedClass(String deletedClass) {
         academicsClassPage.deleteButtonForCreatedClass.click();
         CommonUtils.acceptAlert();
+        for(WebElement classNames : academicsClassPage.listOfClassNames) {
+            String e = classNames.getText();
+            assertNotEquals(deletedClass, e);
+        }
         CommonUtils.sleep(3000);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();

@@ -1,5 +1,7 @@
 package com.chroma.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -31,6 +33,10 @@ public class AcademicsClassPage {
     // Delete button for Class created 
     @FindBy(xpath = "//*[contains(text(),'Sample Class')]//following-sibling::td[2]/a[2]")
     public WebElement deleteButtonForCreatedClass;
+    
+    // Locator for list of class names 
+    @FindBy(xpath = "//*[@class='mailbox-name']")
+    public List<WebElement> listOfClassNames;
 
     public AcademicsClassPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

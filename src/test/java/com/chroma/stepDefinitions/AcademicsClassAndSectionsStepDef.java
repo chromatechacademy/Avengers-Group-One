@@ -78,12 +78,12 @@ public class AcademicsClassAndSectionsStepDef extends PageInitializer {
         AcademicsClassAndSectionStepImpl.isTheNewClassDisplayed();
     }
 
-    /*
+     /*
      * User can delete the Class
      */
-    @When("the user is able to delete the Class")
-    public void the_user_is_able_to_delete_the_Class() {
-        AcademicsClassAndSectionStepImpl.deletingCreatedClass();
+    @When("the user is able to delete the created class name {string}")
+    public void the_user_is_able_to_delete_the_created_class_name(String deletedClass) {
+        AcademicsClassAndSectionStepImpl.deletingCreatedClass(deletedClass);
     }
 
     /*
