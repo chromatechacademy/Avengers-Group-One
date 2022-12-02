@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class DashboardPage {
-
     /* Chroma Tech Academy text */
     @FindBy(xpath = "//span[normalize-space()='Chroma Tech Academy']")
     public WebElement chromaTechAcademyText;
@@ -23,7 +22,11 @@ public class DashboardPage {
     @FindBy(xpath = "//a[normalize-space()='Class']")
     public WebElement classSubModule;
 
+    /* Student Information Module */
+    @FindBy(xpath = "//span[normalize-space()='Student Information']")
+    public static WebElement studentInformationModule;
+
     public DashboardPage() {
-        PageFactory.initElements(WebDriverUtils.driver, this);
-    }    
+    PageFactory.initElements(WebDriverUtils.driver, this);
+    }
 }
