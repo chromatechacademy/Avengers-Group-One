@@ -1,67 +1,84 @@
 package com.chroma.stepDefinitions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.AgentPage;
+import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java.lu.a;
 
 public class AgentPageStepDef extends PageInitializer {
 
-    // Add step definitions in this class
-    // NOTE: Every step definitions class Extends PageInitializer
-    // PageInitializer extends WebDriverUtils
-
-    @Given("an admin user is on the Real Estate login page {string}")
-    public void an_admin_user_is_on_the_Real_Estate_login_page(String url) throws InterruptedException {
-       WebDriverUtils.driver.get(url);
-       
-
-    }
-
-    @When("user logs in with username {string} and password {string}")
-    public void user_logs_in_with_username_and_password(String username, String password) throws InterruptedException {
-        WebDriverUtils.driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("admin@mexil.it");
-        WebDriverUtils.driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("123456");
-        WebDriverUtils.driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
+    @When("verifies a unique agent has been added wih {string}, {string}, {string}, {string}, {string}")
+    public void verifies_a_unique_agent_has_been_added_wih(String firstName, String lastName, String phoneNumber,
+            String email, String password) throws InterruptedException {
         CommonUtils.waitForClickability(agentPage.agentsButton);
         agentPage.agentsButton.click();
-       
+        agentPage.addNowButton.click();
+        agentPage.firstNameBox.sendKeys(firstName);
+        agentPage.lastNameBox.sendKeys(lastName);
+        agentPage.phoneBox.sendKeys(phoneNumber);
+        agentPage.emailNameBox.sendKeys(email);
+        agentPage.passwordBox.sendKeys(password);
+        agentPage.retypePassBox.sendKeys(password);
+        agentPage.saveButton.click();
+        Thread.sleep(4000);
+        agentPage.backButton.click();
+        WebDriverUtils.driver.navigate().refresh();
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
+    }
+
+    @When("logs into the agent website with the new agents credentials {string}, {string}")
+    public void logs_into_the_agent_website_with_the_new_agents_credentials(String email, String password) {
+        WebDriverUtils.driver.get("https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/login.php");
+        CommonUtils.waitForVisibility(agentPage.userNameTextbox);
+        agentPage.userNameTextbox.sendKeys(email);
+        agentPage.passwordTextbox.sendKeys(password);
+        agentPage.loginButton.click();
+        CommonUtils.waitForVisibility(agentPage.dashboardButton);
+        WebDriverUtils.driver
+                .get("https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php");
+        agentPage.userNameTextbox.sendKeys("admin@mexil.it");
+        agentPage.passwordTextbox.sendKeys("123456");
+        agentPage.loginButton.click();
+        CommonUtils.waitForVisibility(agentPage.dashboardButton);
+        agentPage.agentsButton.click();
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
 
     }
 
-    @Then("user is navigated to the agents page")
-    public void user_is_navigated_to_the_agents_page() {
+    @Then("logs into the website with the new agents credentials")
+    public void logs_into_the_website_with_the_new_agents_credentials() {
 
     }
 
-    @When("As an admin user, I am able to add an agent with an unique credentials")
-    public void as_an_admin_user_I_am_able_to_add_an_agent_with_an_unique_credentials() throws InterruptedException {
-        String AddButton = WebDriverUtils.driver.findElement(By.xpath("//button[normalize-space()='Add Now']")).getText();
-        System.out.println(AddButton);
-        WebDriverUtils.driver.findElement(By.xpath("//button[normalize-space()='Add Now']")).click();
-        Thread.sleep(2000);
-        
-
+    @Then("the following text displays {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
+    public void the_following_text_displays(String active, String inactive, String allAgents, String name, String mail,
+            String contactNumber, String actions, String addNow) {
+        CommonUtils.waitForVisibility(agentPage.allAgentButton);
+        Assert.assertEquals(active, agentPage.activeButton.getText().trim());
+        Assert.assertEquals(inactive, agentPage.inactiveButton.getText().trim());
+        Assert.assertEquals(allAgents, agentPage.allAgentButton.getText().trim());
+        Assert.assertEquals(name, agentPage.nameButton.getText().trim());
+        Assert.assertEquals(mail, agentPage.mailButton.getText().trim());
+        Assert.assertEquals(contactNumber, agentPage.contactNumberButton.getText().trim());
+        Assert.assertEquals(actions, agentPage.actionButton.getText().trim());
+        Assert.assertEquals(addNow, agentPage.addNowButton.getText().trim());
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 
-    @When("the agent is added, I am able to verify that the agent is listed as active with the exact credentials")
-    public void the_agent_is_added_I_am_able_to_verify_that_the_agent_is_listed_as_active_with_the_exact_credentials() {
-
-    }
-
-    @Then("the newly created agents information matches the information that I had created it with")
-    public void the_newly_created_agent_s_information_matches_the_information_that_I_had_created_it_with() {
-        
-    }
-    
-    @Then("I am able to log into the website with the new agents credentials")
-    public void i_am_able_to_log_into_the_website_with_the_new_agent_s_credentials() {
-        
-    }
 }
