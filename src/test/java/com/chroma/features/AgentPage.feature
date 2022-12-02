@@ -10,8 +10,8 @@ Feature: Agent page features
   Scenario: Creating a new agent
     Given an admin user is on the Real Estate login page
     When user logs in with username and password
-    And verifies a unique agent has been added wih "Ishaq", "chy", "7339992341", "Ishaqs@email.com", "pasWord"
-    And logs into the agent website with the new agents credentials "Ishaqss@email.com", "pasWord"
+    And verifies a unique agent has been added wih "Ishaq", "chy", "7339992341", "Ishaqs@email.com", "passWord"
+    And logs into the agent website with the new agents credentials "Ishaqss@email.com", "passWord"
 
   @AGO-44 @Reshad @Regression
   Scenario: Validate agent module text
