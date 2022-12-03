@@ -11,26 +11,7 @@ public class HomeworkModulePage {
      @FindBy(xpath = "//a[normalize-space()='Add Homework']")
      public static WebElement addHomeworkModuleTextDisplays;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      public HomeworkModulePage() {
-
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
     

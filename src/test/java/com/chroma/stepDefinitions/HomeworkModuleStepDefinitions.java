@@ -1,19 +1,16 @@
 package com.chroma.stepDefinitions;
 
 import org.openqa.selenium.By;
-
 import com.chroma.pages.HomeworkModulePage;
 import com.chroma.stepsImplementation.LoginStepsImpl;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class HomeworkModuleStepDefinitions {
-    
     @Given("a user is at the CTSMS login page {string}")
     public void a_user_is_at_the_CTSMS_login_page(String url) {
      WebDriverUtils.driver.get(url);

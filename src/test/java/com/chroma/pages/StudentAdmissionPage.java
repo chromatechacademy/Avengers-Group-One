@@ -60,6 +60,7 @@ public class StudentAdmissionPage extends PageInitializer {
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public WebElement saveButton;
 
+    /*Assert record saved text */
     @FindBy(xpath = "(//div[@class='alert alert-success'])[1]")
     public WebElement recordSavedAssertion;
 
