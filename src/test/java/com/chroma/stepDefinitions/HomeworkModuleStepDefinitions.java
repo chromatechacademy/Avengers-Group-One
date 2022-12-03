@@ -31,7 +31,7 @@ public class HomeworkModuleStepDefinitions {
     }
     
     @Then("{string} displays")
-    public void displays(String expectedModuleText) {
+    public static void displays(String expectedModuleText) {
     String addHomeworkDisplays = HomeworkModulePage.addHomeworkModuleTextDisplays.getText();
     CommonUtils.assertEquals(expectedModuleText, addHomeworkDisplays);
     CucumberLogUtils.logScreenShot();
