@@ -22,13 +22,10 @@ public class StudentAdmissionStepImpl extends PageInitializer {
         StudentAdmissionPage.studentAdmissionModule.click();
         StudentAdmissionPage.admissionNumberTextBox.sendKeys(admissionNumber);
         StudentAdmissionPage.rollNumberTextBox.sendKeys(rollNumber);
-        Select classDropDown = new Select(StudentAdmissionPage.classDropDownMenu);
-        classDropDown.selectByVisibleText(classDropDownMenuAdmissionPage);
-        Select sectionDropDown = new Select(StudentAdmissionPage.sectionDropDownMenu);
-        sectionDropDown.selectByVisibleText(sectionDropDownMenuAdmissionPage);
+        CommonUtils.selectDropDownValue(StudentAdmissionPage.classDropDownMenu, classDropDownMenuAdmissionPage);
+        CommonUtils.selectDropDownValue(StudentAdmissionPage.sectionDropDownMenu, sectionDropDownMenuAdmissionPage);
         StudentAdmissionPage.firstNameTextBox.sendKeys(firstName);
-        Select sectionGenderDropDown = new Select(StudentAdmissionPage.genderDropDownMenu);
-        sectionGenderDropDown.selectByVisibleText(femaleGenderDropDown);
+        CommonUtils.selectDropDownValue(StudentAdmissionPage.genderDropDownMenu, femaleGenderDropDown);
         StudentAdmissionPage.DOBDropDownCalendar.click();
         StudentAdmissionPage.DOBDateSelection.click();
         StudentAdmissionPage.guardianRadioButton.click();

@@ -16,8 +16,6 @@ public class StudentAdmissionStepDefinitions {
     @Given("a user is on the CTSMS login page {string}")
     public void a_user_is_on_the_CTSMS_login_page(String url) {
         WebDriverUtils.driver.get(url);
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
     }
 
     @When("user logs in with username {string} and password {string}")
@@ -48,14 +46,12 @@ public class StudentAdmissionStepDefinitions {
 
     @When("selects {string} from the Class drop down menu")
     public void selects_from_the_Class_drop_down_menu(String classDropDownMenuAdmissionPage) {
-        Select classDropDown = new Select(StudentAdmissionPage.classDropDownMenu);
-        classDropDown.selectByVisibleText(classDropDownMenuAdmissionPage);
+        CommonUtils.selectDropDownValue(StudentAdmissionPage.classDropDownMenu, classDropDownMenuAdmissionPage);
     }
 
     @When("selects the {string} option from the Section drop down menu")
     public void selects_the_option_from_the_Section_drop_down_menu(String sectionDropDownMenuAdmissionPage) {
-        Select sectionDropDown = new Select(StudentAdmissionPage.sectionDropDownMenu);
-        sectionDropDown.selectByVisibleText(sectionDropDownMenuAdmissionPage);
+        CommonUtils.selectDropDownValue(StudentAdmissionPage.sectionDropDownMenu, sectionDropDownMenuAdmissionPage);
     }
 
     @When("enters {string} to the First Name text box")
@@ -65,8 +61,7 @@ public class StudentAdmissionStepDefinitions {
 
     @When("selects {string} from the Gender drop down menu")
     public void selects_from_the_Gender_drop_down_menu(String femaleGenderDropDown) {
-        Select sectionGenderDropDown = new Select(StudentAdmissionPage.genderDropDownMenu);
-        sectionGenderDropDown.selectByVisibleText(femaleGenderDropDown);
+        CommonUtils.selectDropDownValue(StudentAdmissionPage.genderDropDownMenu, femaleGenderDropDown);
     }
 
     @When("selects date from the Date of Birth drop down calendar")
@@ -96,16 +91,13 @@ public class StudentAdmissionStepDefinitions {
         CommonUtils.sleep(2000);
     }
 
-    // @Then("student is admitted and {string} is displayed")
-    // public void student_is_admitted_and_is_displayed(String
-    // recordSavedSuccessfullyText) {
-    // String studentAdmittedAssertion =
-    // StudentAdmissionPage.recordSavedAssertion.getText();
-    // CommonUtils.assertEquals(recordSavedSuccessfullyText,
-    // studentAdmittedAssertion);
-    // CucumberLogUtils.logScreenShot();
-    // CucumberLogUtils.logExtentScreenshot();
-    // }
+    @Then("student is admitted and {string} is displayed")
+    public void student_is_admitted_and_is_displayed(String recordSavedSuccessfullyText) {
+        String studentAdmittedAssertion = StudentAdmissionPage.recordSavedAssertion.getText();
+        CommonUtils.assertEquals(recordSavedSuccessfullyText, studentAdmittedAssertion);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
+    }
 
     @When("selects Bulk Delete from the Student Information module")
     public void selects_Bulk_Delete_from_the_Student_Information_module() {
