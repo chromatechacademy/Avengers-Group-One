@@ -29,5 +29,7 @@ public class PageInitializer extends WebDriverUtils {
         studentCategoriesPage = new StudentCategoriesPage();
         studentAdmissionPage = new StudentAdmissionPage();
         bulkDeletePage = new BulkDeletePage();
+        
+        
     }
 }

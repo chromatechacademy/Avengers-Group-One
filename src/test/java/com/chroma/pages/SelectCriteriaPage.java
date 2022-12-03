@@ -1,44 +1,38 @@
 package com.chroma.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import com.chroma.appsCommon.PageInitializer;
 import com.chroma.web.WebDriverUtils;
 
-public class SelectCriteriaPage  {
+public class SelectCriteriaPage extends PageInitializer {
 
-     // Store page elements using @FindBy
+    /* Student information module */
+    @FindBy (xpath = "//span[normalize-space()='Student Information']")
+    public WebElement studentInformationModule;
 
-     @FindBy(xpath = "xpath goes here")
-     public WebElement sampleElement;
- 
-     // Use a constructor to initialize all page elements, else you will get a
-     // NullPointerException
- 
-     /**
-      * Below method is a sample method of how you can use a dynamic xpath
-      * @param text
-      * @return
-      */
-     public static WebElement sampleDynamicMethod(String text) {
- 
-         return WebDriverUtils.driver.findElement(By.xpath("//*[contains(text(),'" + text + "')]"));
-     }
- 
-     public SelectCriteriaPage() {
-         PageFactory.initElements(WebDriverUtils.driver, this);
-     }
- 
- 
+    /* navigates to Select Details page */
+    @FindBy(xpath = "(//a[normalize-space()='Student Details'])[2]")
+    public WebElement studentDetailsPage;
+
+    /* Select Class dropdown */
+    @FindBy(xpath = "//select[@name='class_id']")
+    public WebElement classDropDown;  
+
+    /* Select section dropdown */
+    @FindBy(xpath = "//select[@name='section_id']")
+    public WebElement sectionDropDown; 
+    
+    /* Click on search button */
+    @FindBy(xpath = "//button[@value='search_filter']")
+    public WebElement searchBtn;
+
+
+
+
+    public SelectCriteriaPage() {
+        PageFactory.initElements(WebDriverUtils.driver, this);
     }
- 
 
-
-    
-
-
-
-    
-
+}
