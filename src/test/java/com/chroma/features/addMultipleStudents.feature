@@ -2,7 +2,6 @@ Feature: Adding multiple students
 
     @AGO-19  @Yaryna
     Scenario Outline: Adding multiple students
-
         Given a user is on the CTSMS login page "https://chroma.mexil.it/site/login"
         When user logs in with username "general@teacher.com" and password "123456"
         And navigates to the Student Information drop down module
