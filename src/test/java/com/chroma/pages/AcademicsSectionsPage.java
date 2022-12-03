@@ -34,5 +34,4 @@ public class AcademicsSectionsPage {
     public AcademicsSectionsPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-
 }
