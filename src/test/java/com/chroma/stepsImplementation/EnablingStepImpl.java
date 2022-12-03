@@ -40,7 +40,6 @@ public class EnablingStepImpl extends PageInitializer {
      * 
      */
     public void studentDetails() {
-
         studentDetails.stDetails.click();
         WebElement classDropDown = studentDetails.selectClass;
         CommonUtils.selectDropDownValue(classDropDown, 1);
@@ -57,7 +56,6 @@ public class EnablingStepImpl extends PageInitializer {
      * 
      */
     public void deleteStudent() {
-
         BulkDeletePage.bulkDeleteModule.click();
         WebElement classDropDown = studentDetails.selectClass;
         CommonUtils.selectDropDownValue(classDropDown, 1);

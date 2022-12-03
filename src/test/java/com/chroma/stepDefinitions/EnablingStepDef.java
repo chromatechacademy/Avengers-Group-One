@@ -18,7 +18,6 @@ public class EnablingStepDef extends PageInitializer {
 
     @When("a student is disabled")
     public void a_student_is_disabled() throws InterruptedException {
-
         StudentAdmissionPage.studentAdmissionModule.click();
         enablingStepImpl.admittingStudent();
         enablingStepImpl.studentDetails();
@@ -27,7 +26,6 @@ public class EnablingStepDef extends PageInitializer {
 
     @Then("a student can be enabled again")
     public void a_student_can_be_enabled_again() throws InterruptedException {
-
         enablingStepImpl.enablingStudent();
         enablingStepImpl.deleteStudent();    
     }
