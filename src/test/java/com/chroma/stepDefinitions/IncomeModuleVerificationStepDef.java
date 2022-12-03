@@ -1,5 +1,7 @@
 package com.chroma.stepDefinitions;
 
+import static org.junit.Assert.assertArrayEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,17 +29,23 @@ public class IncomeModuleVerificationStepDef extends PageInitializer {
 
     @Then("the following clickable sections appears {string} {string} {string}")
     public void the_following_clickable_sections_appears(String addIncome, String searchIncome, String incomeHead) {
-        List<WebElement> Income = driver
-                .findElements(By.xpath("//a[contains(text(),'Income')]//parent::li/descendant::a"));
-        
-        ArrayList<String> incomeNameExpected = new ArrayList<String>();      
-        incomeNameExpected.add(addIncome);
-        incomeNameExpected.add(searchIncome);
-        incomeNameExpected.add(incomeHead);
+        WebElement IncomeOne = driver
+                .findElement(By.xpath("(//a[contains(text(),'Income')]//parent::li/descendant::a)[1]"));
+        WebElement IncomeTwo = driver
+                .findElement(By.xpath("(//a[contains(text(),'Income')]//parent::li/descendant::a)[2]"));
+        WebElement IncomeThree = driver
+                .findElement(By.xpath("(//a[contains(text(),'Income')]//parent::li/descendant::a)[3]"));
 
-        for (WebElement income : Income) {
-            String[] incomeNameActualArray = { income.getText()};
-            Assert.assertEquals(incomeNameExpected, incomeNameActualArray);
-        }
+        String incomeNameExpectedOne = addIncome;
+        String incomeNameExpectedTwo = searchIncome;
+        String incomeNameExpectedThree = incomeHead;
+
+        String incomeNameActualArrayOne = IncomeOne.getText();
+        String incomeNameActualArrayTwo = IncomeTwo.getText();
+        String incomeNameActualArrayThree = IncomeThree.getText();
+
+        Assert.assertEquals(incomeNameExpectedOne, incomeNameActualArrayOne);
+        Assert.assertEquals(incomeNameExpectedTwo, incomeNameActualArrayTwo);
+        Assert.assertEquals(incomeNameExpectedThree, incomeNameActualArrayThree);
     }
 }
