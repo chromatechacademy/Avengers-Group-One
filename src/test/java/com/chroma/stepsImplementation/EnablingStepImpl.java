@@ -3,7 +3,6 @@ package com.chroma.stepsImplementation;
 import org.openqa.selenium.WebElement;
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.BulkDeletePage;
-import com.chroma.pages.StudentAdmissionPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
@@ -16,21 +15,21 @@ public class EnablingStepImpl extends PageInitializer {
      * 
      */
     public void admittingStudent() {
-        StudentAdmissionPage.admissionNumberTextBox.sendKeys("2501");
-        StudentAdmissionPage.firstNameTextBox.sendKeys("Yaryna");
+        studentAdmissionPage.admissionNumberTextBox.sendKeys("2501");
+        studentAdmissionPage.firstNameTextBox.sendKeys("Yaryna");
         WebElement classDropDowns = studentDetails.selectClass;
         CommonUtils.selectDropDownValue(classDropDowns, 1);
         WebElement sectionDropDowns = studentDetails.selectSection;
         CommonUtils.selectDropDownValue(sectionDropDowns, 1);
-        WebElement genderDropDown = StudentAdmissionPage.genderDropDownMenu;
+        WebElement genderDropDown = studentAdmissionPage.genderDropDownMenu;
         CommonUtils.selectDropDownValue(genderDropDown, 2);
-        StudentAdmissionPage.DOBDropDownCalendar.click();
-        StudentAdmissionPage.DOBDateSelection.click();
+        studentAdmissionPage.DOBDropDownCalendar.click();
+        studentAdmissionPage.DOBDateSelection.click();
         CommonUtils.sleep(3000);
-        StudentAdmissionPage.guardianRadioButton.click();
-        StudentAdmissionPage.guardianNameTextBox.sendKeys("Luka");
-        StudentAdmissionPage.guardianPhoneTextBox.sendKeys("676954");
-        StudentAdmissionPage.saveButton.click();
+        studentAdmissionPage.guardianRadioButton.click();
+        studentAdmissionPage.guardianNameTextBox.sendKeys("Luka");
+        studentAdmissionPage.guardianPhoneTextBox.sendKeys("676954");
+        studentAdmissionPage.saveButton.click();
         CommonUtils.sleep(2000);
     }
 

@@ -1,7 +1,6 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.pages.StudentAdmissionPage;
 import com.chroma.stepsImplementation.LoginStepsImpl;
 import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.Given;
@@ -18,7 +17,7 @@ public class EnablingStepDef extends PageInitializer {
 
     @When("a student is disabled")
     public void a_student_is_disabled() throws InterruptedException {
-        StudentAdmissionPage.studentAdmissionModule.click();
+        studentAdmissionPage.studentAdmissionModule.click();
         enablingStepImpl.admittingStudent();
         enablingStepImpl.studentDetails();
         enablingStepImpl.disablingStudent();    
