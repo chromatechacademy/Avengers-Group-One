@@ -2,11 +2,8 @@ package com.chroma.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import com.chroma.appsCommon.PageInitializer;
-import com.chroma.web.WebDriverUtils;
 
-public class SelectCriteriaPage extends PageInitializer {
+public class EditStudentPage {
 
     /* Student information module */
     @FindBy(xpath = "//span[normalize-space()='Student Information']")
@@ -28,10 +25,8 @@ public class SelectCriteriaPage extends PageInitializer {
     @FindBy(xpath = "//button[@value='search_filter']")
     public WebElement searchBtn;
 
-    @FindBy(xpath = "//td[normalize-space()='022408']")
-    public WebElement admissionNumber;
+    /* */
+    @FindBy(xpath = "//input[@id='admission_no']")
+    public WebElement admissionTextBox;
 
-    public SelectCriteriaPage() {
-        PageFactory.initElements(WebDriverUtils.driver, this);
-    }
 }

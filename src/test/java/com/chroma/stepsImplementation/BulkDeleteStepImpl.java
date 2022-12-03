@@ -9,10 +9,7 @@ public class BulkDeleteStepImpl extends PageInitializer {
     public static void bulkDelete(
             String classDropDownMenuBulkDeletePage,
             String sectionDropDownMenuBulkDeletePage,
-            String admissionNumber
-
-    ) {
-
+            String admissionNumber) {
         BulkDeletePage.bulkDeleteModule.click();
         Select classDropDown = new Select(BulkDeletePage.classDropDownMenu);
         classDropDown.selectByVisibleText(classDropDownMenuBulkDeletePage);
@@ -23,7 +20,5 @@ public class BulkDeleteStepImpl extends PageInitializer {
         BulkDeletePage.checkBoxToDelete.click();
         BulkDeletePage.deleteButton.click();
         WebDriverUtils.driver.switchTo().alert().accept();
-
     }
-
 }

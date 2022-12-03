@@ -1,7 +1,6 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.pages.SelectCriteriaPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 
@@ -35,11 +34,11 @@ public class SelectCriteriaPageStepDefinitions extends PageInitializer {
     @When("clicks on search button")
     public void clicks_on_search_button() {
         selectCriteriaPage.searchBtn.click();
-}
+    }
 
     @When("user creates admission with an existing number")
     public void user_creates_admission_with_an_existing_number() {
-
+        selectCriteriaPage.admissionNumber.click();
         CommonUtils.sleep(2000);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
