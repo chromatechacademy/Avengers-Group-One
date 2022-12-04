@@ -11,6 +11,6 @@ Feature: Ability to add and delete student categories
         And user enters "API" in Category TextBox
         And clicks save and new category is added "Record Saved Successfully"
         And clicks delete
-        Then new category is deleted "Record Deleted Successfully"
+        Then new category is deleted "Record Delete Successfully"
 
 
