@@ -15,13 +15,11 @@ public class ClassesAndSectionStepDefinitions extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
-
     @When("navigates to Class sub module")
     public void navigates_to_Class_sub_module() {
         dashboardPage.classSubModule.click();
         CommonUtils.sleep(2000);
-    }
-
+    }    
     @When("adds class {string} to Sample class Section")
     public void adds_class_to_Sample_class_Section(String classText) {
         addClassPage.addClassTextBox.sendKeys(classText);
@@ -29,14 +27,12 @@ public class ClassesAndSectionStepDefinitions extends PageInitializer {
         addClassPage.sampleClassTextBox.click();
         addClassPage.saveButton.click();
         CommonUtils.sleep(2000);
-    }
-
+    } 
     @When("verifies message {string}")
     public void verifies_message(String expectedText) {
         String actualText = addClassPage.recordSavedSuccessfullyText.getText();
         CommonUtils.assertEquals(expectedText, actualText);
     }
-
     @When("verifies class {string} was added")
     public void verifies_class_was_added(String expectedText) {
         String actualText = addClassPage.rukshanClassText.getText();
@@ -44,8 +40,7 @@ public class ClassesAndSectionStepDefinitions extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
-
-    @Then("deletes class to rerun automated test case")
+     @Then("deletes class to rerun automated test case")
     public void deletes_class_to_rerun_automated_test_case() {
         addClassPage.rukshanRecordDeleteLink.click();
         CommonUtils.sleep(2000);

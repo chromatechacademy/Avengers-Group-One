@@ -18,7 +18,6 @@ public class EditStudentRecordStepDefinitions extends PageInitializer {
     @When("clicks on search button")
     public void clicks_on_search_button() {
         editStudentRecordPage.searchBtn.click();
-
     }
 
     @When("user clicks on edit under action")
@@ -36,7 +35,6 @@ public class EditStudentRecordStepDefinitions extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
-   
 
     @When("user clicks on save button")
     public void user_clicks_on_save_button() {
@@ -45,10 +43,9 @@ public class EditStudentRecordStepDefinitions extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
-
+    
     @Then("user changes are saved")
-     public void user_changes_are_saved() {
-         editStudentRecordPage.recordUpdateSuccessfullyText.getText();
+    public void user_changes_are_saved() {
+        editStudentRecordPage.recordUpdateSuccessfullyText.getText();
     }
-
 }
