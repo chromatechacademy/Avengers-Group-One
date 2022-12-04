@@ -7,6 +7,7 @@ import com.chroma.pages.DuplicateStudentAdmissionPage;
 import com.chroma.pages.EditStudentRecordPage;
 import com.chroma.pages.HomeworkModulePage;
 import com.chroma.pages.LoginPage;
+import com.chroma.pages.MultipleStudentsPage;
 import com.chroma.pages.StudentAdmissionPage;
 import com.chroma.pages.StudentCategoriesPage;
 import com.chroma.pages.StudentDetailsPage;
@@ -25,6 +26,8 @@ public class PageInitializer extends WebDriverUtils {
     public static HomeworkModulePage homeworkPage;
     public static EditStudentRecordPage editStudentRecordPage;
     public static DuplicateStudentAdmissionPage duplicateStudentAdmissionPage;
+    public static MultipleStudentsPage multipleStudentsPage ;
+    
 
     public void initializeAllPages() {
         loginPage = new LoginPage();
@@ -38,5 +41,6 @@ public class PageInitializer extends WebDriverUtils {
         homeworkPage = new HomeworkModulePage();
         editStudentRecordPage = new EditStudentRecordPage();
         duplicateStudentAdmissionPage = new DuplicateStudentAdmissionPage();
+        multipleStudentsPage = new MultipleStudentsPage();
     }
 }
