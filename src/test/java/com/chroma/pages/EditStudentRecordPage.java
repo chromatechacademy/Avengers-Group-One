@@ -3,7 +3,7 @@ package com.chroma.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class EditStudentPage {
+public class EditStudentRecordPage {
 
     /* Student information module */
     @FindBy(xpath = "//span[normalize-space()='Student Information']")
@@ -25,8 +25,12 @@ public class EditStudentPage {
     @FindBy(xpath = "//button[@value='search_filter']")
     public WebElement searchBtn;
 
-    /* */
+    /* admission text box */
     @FindBy(xpath = "//input[@id='admission_no']")
     public WebElement admissionTextBox;
+
+    /* edit function */
+    @FindBy(xpath = "//tbody/tr[1]/td[11]/a[2]/i[1]")
+    public WebElement editBtn;
 
 }

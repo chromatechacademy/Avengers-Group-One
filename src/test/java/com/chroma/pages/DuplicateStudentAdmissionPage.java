@@ -3,10 +3,11 @@ package com.chroma.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.web.WebDriverUtils;
 
-public class SelectCriteriaPage extends PageInitializer {
+public class DuplicateStudentAdmissionPage extends PageInitializer {
 
     /* Student information module */
     @FindBy(xpath = "//span[normalize-space()='Student Information']")
@@ -31,7 +32,12 @@ public class SelectCriteriaPage extends PageInitializer {
     @FindBy(xpath = "//td[normalize-space()='022408']")
     public WebElement admissionNumber;
 
-    public SelectCriteriaPage() {
+    @FindBy(xpath = "//p[contains(text(),'The Admission No field must contain a unique value')]")
+    public WebElement addErrorMsg;
+
+    public DuplicateStudentAdmissionPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 }
+
+
