@@ -1,6 +1,6 @@
 Feature: CTSMS - Navigation Module AGO-3
 
-  @AGO3 @Smoke @Zhenya
+  @AGO3 @Regression @Zhenya
   Scenario: All modules are displayed after successful login 
     Given a user is on the "https://chroma.mexil.it/site/login" Homepage
     When user logs in with email "general@teacher.com" and password "123456"

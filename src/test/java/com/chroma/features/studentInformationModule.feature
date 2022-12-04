@@ -1,6 +1,6 @@
 Feature: CTSMS - Student Information Module AGO-4
 
-  @AGO4 @Smoke @Zhenya
+  @AGO4 @Regression @Zhenya
   Scenario: All modules are displayed under Student Information Module
     Given a user is on the "https://chroma.mexil.it/site/login" Homepage
     When user logs in with email "general@teacher.com" and password "123456"
