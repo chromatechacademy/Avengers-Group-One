@@ -1,6 +1,6 @@
 Feature: As a Chroma Tech faculty user, I should be able to edit student records by searching student detail
   
-  @AGO-14 @Rukshan
+  @AGO-14 @Rukshan @Regression
   Scenario: CTSMS - Ability to edit student records
     Given a user is on the "https://chroma.mexil.it/site/login" Homepage
     When user logs in with email "general@teacher.com" and password "123456"

@@ -1,7 +1,7 @@
 Feature: CTSMS - Student Admissions
 As an admin/faculty user, I should not be able to admit a student with an already existing admission number. 
 
-  @AGO-13 @Regression
+  @AGO-13 @Rukshan @Regression
   Scenario: CTSMS - Student unique admission number
     Given a user is on the "https://chroma.mexil.it/site/login" Homepage
     When user logs in with email "general@teacher.com" and password "123456"

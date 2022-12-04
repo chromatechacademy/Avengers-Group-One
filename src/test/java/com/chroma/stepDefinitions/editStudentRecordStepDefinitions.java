@@ -25,5 +25,4 @@ public class EditStudentRecordStepDefinitions extends PageInitializer {
     public void user_changes_are_saved() {
 
     }
-
 }

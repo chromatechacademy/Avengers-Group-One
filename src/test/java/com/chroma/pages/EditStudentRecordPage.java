@@ -28,5 +28,4 @@ public class EditStudentRecordPage {
     /* edit button */
     @FindBy(xpath = "//tbody/tr[1]/td[11]/a[2]/i[1]")
     public WebElement recordUpdateSuccessfully;
-
 }
