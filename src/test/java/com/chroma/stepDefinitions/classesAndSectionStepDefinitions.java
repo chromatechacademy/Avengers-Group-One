@@ -19,7 +19,7 @@ public class ClassesAndSectionStepDefinitions extends PageInitializer {
     @When("navigates to Class sub module")
     public void navigates_to_Class_sub_module() {
         dashboardPage.classSubModule.click();
-        CommonUtils.sleep(2000);    
+        CommonUtils.sleep(2000);
     }
 
     @When("adds class {string} to Sample class Section")
