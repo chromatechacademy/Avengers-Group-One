@@ -1,20 +1,20 @@
 Feature: Adding multiple students
 
-    @AGO-19  @Yaryna
+    @AGO-19  @Yaryna #@Progression
     Scenario Outline: Adding multiple students
         Given a user is on the CTSMS login page "https://chroma.mexil.it/site/login"
         When user logs in with username "general@teacher.com" and password "123456"
         And navigates to the Student Information drop down module
         And selects the Student Admission option
-        And enters admission NO <admissionNO>
-        And enters First Name <firstName>
-        And user selects Class <class>
-        And selects Section <section>
-        And selects Gender <gender>
-        And clicks on Date of Birth <dateOfBirth>
-        And selects If Guardian Is <ifGuardianIs>
-        And user enters Guardian Name <guardianName>
-        And enters Guardian Phone <guardianPhone>
+        And enters admission NO "<admissionNO>"
+        And enters First Name "<firstName>"
+        And user selects Class "<class>"
+        And selects Section "<section>"
+        And selects Gender "<gender>"
+        And clicks on Date of Birth "<dateOfBirth>"
+        And selects If Guardian Is "<ifGuardianIs>"
+        And user enters Guardian Name "<guardianName>"
+        And enters Guardian Phone "<guardianPhone>"
 
         Examples:
             | admissionNO | firstName | Class | Section     | Date of Birth | Gender | If Guardian Is | Guardian Name | Guardian Phone |
