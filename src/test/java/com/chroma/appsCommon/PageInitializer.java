@@ -3,6 +3,7 @@ import com.chroma.pages.AcademicsClassPage;
 import com.chroma.pages.AcademicsSectionsPage;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.HomeworkModulePage;
+import com.chroma.pages.ModuleVerifcationPage;
 import com.chroma.pages.LoginPage;
 import com.chroma.pages.StudentCategoriesPage;
 import com.chroma.pages.StudentDetailsPage;
@@ -22,6 +23,7 @@ public class PageInitializer extends WebDriverUtils {
     public static BulkDeletePage bulkDeletePage;
     public static EnablingStepImpl enablingStepImpl;
     public static HomeworkModulePage homeworkPage;
+    public static ModuleVerifcationPage moduleVerificationPage;
 
     public void initializeAllPages() {
         loginPage = new LoginPage();
@@ -34,5 +36,6 @@ public class PageInitializer extends WebDriverUtils {
         bulkDeletePage = new BulkDeletePage();
         enablingStepImpl = new EnablingStepImpl();
         homeworkPage = new HomeworkModulePage();
+        moduleVerificationPage = new ModuleVerifcationPage();
     }
 }

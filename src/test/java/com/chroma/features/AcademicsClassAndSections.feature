@@ -1,6 +1,6 @@
 Feature: Testing Academic Module Dropdowns
 
-  @Progression @AGO-18 @AGO-17 @james
+  @Regression @AGO-18 @AGO-17 @james
   Scenario: Testing the add and delete function for Classes and Sections
     Given a user is on the "https://chroma.mexil.it/site/login" Homepage
     When user logs in with email "general@teacher.com" and password "123456"

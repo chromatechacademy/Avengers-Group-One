@@ -19,7 +19,7 @@ public class AcademicsClassPage {
     public WebElement classNameTextBox;
 
     // The xpath for the Section created previously in Step Def
-    @FindBy(xpath = "//input[@type='checkbox']//ancestor::form/descendant::div[1]/descendant::input[7]")
+    @FindBy(xpath = "//input[@type='checkbox']//ancestor::form/descendant::div[1]/descendant::input[19]")
     public WebElement checkboxOfCreatedSection; 
 
     // Class creation save button

@@ -31,9 +31,9 @@ public class AcademicsClassAndSectionStepImpl extends PageInitializer {
 
     public static void creatingSections(String sectionName) {
         academicsSectionsPage.sectionNameTextBox.sendKeys(sectionName);
+        academicsSectionsPage.sectionsSaveButton.click();
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
-        academicsSectionsPage.sectionsSaveButton.click();
     }
 
     public static void deletingCreatedSections() {
