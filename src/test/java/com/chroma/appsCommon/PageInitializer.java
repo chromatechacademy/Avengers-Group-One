@@ -29,7 +29,7 @@ public class PageInitializer extends WebDriverUtils {
     public static DuplicateStudentAdmissionPage duplicateStudentAdmissionPage;
     public static AcademicsClassPage academicsClassPage;
     public static AcademicsSectionsPage academicsSectionsPage;
-    public static ModuleVerifcationPage moduleVerifcationPage;
+    public static ModuleVerifcationPage moduleVerificationPage;
 
     public void initializeAllPages() {
         loginPage = new LoginPage();
@@ -44,6 +44,7 @@ public class PageInitializer extends WebDriverUtils {
         editStudentRecordPage = new EditStudentRecordPage();
         duplicateStudentAdmissionPage = new DuplicateStudentAdmissionPage();
         academicsClassPage = new AcademicsClassPage();
-        moduleVerifcationPage = new ModuleVerifcationPage();
+        academicsSectionsPage = new AcademicsSectionsPage();
+        moduleVerificationPage = new ModuleVerifcationPage();
     }
 }

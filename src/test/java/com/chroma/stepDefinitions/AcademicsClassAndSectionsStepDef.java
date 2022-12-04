@@ -17,10 +17,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class AcademicsClassAndSectionsStepDef extends PageInitializer {
-    
+
     // After logging in, click on Academic module dropdown on the left side
-    @When("user clicks on Academic module")
-    public void user_clicks_on_Academic_module() throws InterruptedException {
+    @When("user clicks on Academic module while on the Dashboard page")
+    public void user_clicks_on_Academic_module_while_on_the_Dashboard_page() {
         AcademicsClassAndSectionStepImpl.clickingAcademicButton();
     }
 
@@ -71,5 +71,4 @@ public class AcademicsClassAndSectionsStepDef extends PageInitializer {
     public void the_user_can_also_delete_the_Section() {
         AcademicsClassAndSectionStepImpl.deletingCreatedSections();
     }
-
 }

@@ -20,6 +20,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class IncomeModuleVerificationStepDef extends PageInitializer {
+    
     // USER CLICKS ON INCOME MODULE
     @When("user clicks on the Income Module")
     public void user_clicks_on_the_Income_Module() {

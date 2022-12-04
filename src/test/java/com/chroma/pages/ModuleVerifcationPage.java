@@ -39,10 +39,10 @@ public class ModuleVerifcationPage {
     /*
      * BELOW ARE XPATHS FOR ACADEMICS MODULE
      */
-    // Expense Module Button
+    // Academics Module Button
     @FindBy(xpath = "//*[contains(text(),'Academics')]//parent::a")
     public WebElement academicsModuleButton;
-    // Xpaths for name of buttons under Academic module
+    // Xpaths for name of buttons under Academics module
     @FindBy(xpath = "(//*[contains(text(),'Class')]//parent::a)[2]")
     public WebElement buttonClassTimeTable;
     @FindBy(xpath = "(//*[contains(text(),'Class')]//parent::a)[3]")

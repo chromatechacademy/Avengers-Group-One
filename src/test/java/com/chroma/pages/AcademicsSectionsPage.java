@@ -12,7 +12,7 @@ import com.chroma.web.WebDriverUtils;
 public class AcademicsSectionsPage {
 
     // Academic Module dropdown button on the homepage after logging in
-    @FindBy(xpath = "//body[1]/div[1]/aside[1]/div[1]/section[1]/ul[2]/li[5]/a[1]")
+    @FindBy(xpath = "//*[contains(text(),'Academics')]//parent::a")
     public WebElement academicModuleButton;
 
     // Section Button after clicking Academic Module dropdown button

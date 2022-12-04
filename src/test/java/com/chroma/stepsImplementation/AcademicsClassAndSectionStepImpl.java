@@ -17,10 +17,11 @@ import cucumber.api.java.an.E;
 
 public class AcademicsClassAndSectionStepImpl extends PageInitializer {
 
-    // BELOW METHODS ARE ALL FOR ACADEMICS SECTION PAGE UNTIL NEXT COMMENT
+    /*
+     * BELOW METHODS ARE ALL FOR ACADEMICS SECTION PAGE
+     */
     public static void clickingAcademicButton() {
         academicsSectionsPage.academicModuleButton.click();
-        CommonUtils.sleep(3000);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
@@ -45,7 +46,9 @@ public class AcademicsClassAndSectionStepImpl extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
     }
 
-    // BELOW METHODS ARE ALL FOR ACADEMICS CLASS PAGE UNTIL THE END
+    /*
+     * BELOW METHODS ARE ALL FOR ACADEMICS CLASS PAGE UNTIL THE END
+     */
     public static void clickingClassbutton() {
         academicsClassPage.classButton.click();
     }
@@ -71,7 +74,7 @@ public class AcademicsClassAndSectionStepImpl extends PageInitializer {
     public static void deletingCreatedClass(String deletedClass) {
         academicsClassPage.deleteButtonForCreatedClass.click();
         CommonUtils.acceptAlert();
-        for(WebElement classNames : academicsClassPage.listOfClassNames) {
+        for (WebElement classNames : academicsClassPage.listOfClassNames) {
             String e = classNames.getText();
             assertNotEquals(deletedClass, e);
         }

@@ -12,7 +12,7 @@ public class AcademicsModuleVerificationStepImpl extends PageInitializer {
 
     // Clicking Academic Module
     public static void clickingOnAcademicModule() {
-        moduleVerificationPage.expenseModuleButton.click();
+        moduleVerificationPage.academicsModuleButton.click();
         CommonUtils.waitForVisibility(moduleVerificationPage.buttonSections);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
@@ -20,8 +20,8 @@ public class AcademicsModuleVerificationStepImpl extends PageInitializer {
 
     // Asserting the buttons under Academic Module
     public static void assertingAcademicsModule(String classTimetable, String teachersTimetable,
-    String assignClassTeacher, String promoteStudents,
-    String subjectGroup, String subjects, String classModule, String sections) {
+            String assignClassTeacher, String promoteStudents,
+            String subjectGroup, String subjects, String classModule, String sections) {
         WebElement academicNameOne = moduleVerificationPage.buttonClassTimeTable;
         WebElement academicNameTwo = moduleVerificationPage.buttonTeacherTimeTable;
         WebElement academicNameThree = moduleVerificationPage.buttonAssignClassTeacher;
@@ -55,5 +55,4 @@ public class AcademicsModuleVerificationStepImpl extends PageInitializer {
         CommonUtils.assertEquals(academicExpectedSeven, academicActualSeven);
         CommonUtils.assertEquals(academicExpectedEight, academicActualEight);
     }
-
 }
