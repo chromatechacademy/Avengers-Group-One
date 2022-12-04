@@ -6,7 +6,7 @@ import com.chroma.web.CommonUtils;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class classesAndSectionStepDefinitions extends PageInitializer {
+public class ClassesAndSectionStepDefinitions extends PageInitializer {
 
     @When("navigates to Academics module")
     public void navigates_to_Academics_module() {

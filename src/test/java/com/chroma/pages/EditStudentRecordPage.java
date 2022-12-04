@@ -10,11 +10,11 @@ public class EditStudentRecordPage {
     public WebElement studentDetailsModule;
 
     /* Select Class dropdown */
-    @FindBy(xpath = "//select[@name='class_id']")
+    @FindBy(xpath = "//select[@id='class_id']")
     public WebElement classDropDown;
 
     /* Select section dropdown */
-    @FindBy(xpath = "(//select[@name='section_id'])[1]")
+    @FindBy(xpath = "//select[@id='section_id']")
     public WebElement sectionDropDown;
 
     /* Click on search button */
@@ -25,8 +25,8 @@ public class EditStudentRecordPage {
     @FindBy(xpath = "//input[@id='admission_no']")
     public WebElement admissionTextBox;
 
-    /* edit function */
+    /* edit button */
     @FindBy(xpath = "//tbody/tr[1]/td[11]/a[2]/i[1]")
-    public WebElement editBtn;
+    public WebElement recordUpdateSuccessfully;
 
 }
