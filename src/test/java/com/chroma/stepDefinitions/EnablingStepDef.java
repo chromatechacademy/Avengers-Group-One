@@ -26,6 +26,7 @@ public class EnablingStepDef extends PageInitializer {
     @Then("a student can be enabled again")
     public void a_student_can_be_enabled_again() throws InterruptedException {
         enablingStepImpl.enablingStudent();
-        enablingStepImpl.deleteStudent();    
+        enablingStepImpl.deleteStudent();   
+         
     }
 }

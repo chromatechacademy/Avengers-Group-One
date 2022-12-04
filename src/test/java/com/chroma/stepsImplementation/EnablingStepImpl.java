@@ -15,7 +15,7 @@ public class EnablingStepImpl extends PageInitializer {
      * 
      */
     public void admittingStudent() {
-        studentAdmissionPage.admissionNumberTextBox.sendKeys("2501");
+        studentAdmissionPage.admissionNumberTextBox.sendKeys("3501");
         studentAdmissionPage.firstNameTextBox.sendKeys("Yaryna");
         WebElement classDropDowns = studentDetails.selectClass;
         CommonUtils.selectDropDownValue(classDropDowns, 1);
@@ -59,7 +59,7 @@ public class EnablingStepImpl extends PageInitializer {
         WebElement classDropDown = studentDetails.selectClass;
         CommonUtils.selectDropDownValue(classDropDown, 1);
         BulkDeletePage.selectSearchButton.click();
-        BulkDeletePage.searchAdmissisonNumber.sendKeys("2501");
+        BulkDeletePage.searchAdmissisonNumber.sendKeys("3501");
         BulkDeletePage.checkBoxToDelete.click();
         BulkDeletePage.deleteButton.click();
         WebDriverUtils.driver.switchTo().alert().accept();
@@ -93,5 +93,14 @@ public class EnablingStepImpl extends PageInitializer {
         CommonUtils.sleep(2000);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
+    }
+
+     /**
+     * Use this method to for new section
+     * 
+     * 
+     */
+    public void sectionSelenium() {
+        
     }
 }
