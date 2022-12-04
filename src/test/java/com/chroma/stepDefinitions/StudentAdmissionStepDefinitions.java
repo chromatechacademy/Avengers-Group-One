@@ -20,7 +20,7 @@ public class StudentAdmissionStepDefinitions extends PageInitializer {
     @When("user logs in with username {string} and password {string}")
     public void user_logs_in_with_username_and_password(String username, String password) {
         LoginStepsImpl.login(username, password);
-        CommonUtils.sleep(4000);
+        CommonUtils.waitForVisibility(dashboardPage.chromaTechAcademyText);
     }
 
     @When("navigates to the Student Information drop down module")
@@ -87,13 +87,12 @@ public class StudentAdmissionStepDefinitions extends PageInitializer {
     @When("clicks the Save button")
     public void clicks_the_Save_button() {
         studentAdmissionPage.saveButton.click();
-        CommonUtils.sleep(2000);
+        CommonUtils.waitForVisibility(studentAdmissionPage.recordSavedAssertion);
     }
 
     @Then("student is admitted and {string} is displayed")
     public void student_is_admitted_and_is_displayed(String recordSavedSuccessfullyText) {
-        String studentAdmittedAssertion = studentAdmissionPage.recordSavedAssertion.getText();
-        CommonUtils.assertEquals(recordSavedSuccessfullyText, studentAdmittedAssertion);
+        CommonUtils.assertEquals(recordSavedSuccessfullyText, studentAdmissionPage.recordSavedAssertion.getText());
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }

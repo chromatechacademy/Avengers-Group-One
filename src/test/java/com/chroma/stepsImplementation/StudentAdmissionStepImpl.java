@@ -22,7 +22,7 @@ public class StudentAdmissionStepImpl extends PageInitializer {
         studentAdmissionPage.guardianNameTextBox.sendKeys(guardianName);
         studentAdmissionPage.guardianPhoneTextBox.sendKeys(guardianPhoneNum);
         studentAdmissionPage.saveButton.click();
-        CommonUtils.sleep(2000);
+        CommonUtils.waitForVisibility(studentAdmissionPage.recordSavedAssertion);
     }
 
 }
