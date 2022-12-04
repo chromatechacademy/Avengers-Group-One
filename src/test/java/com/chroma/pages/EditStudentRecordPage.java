@@ -5,13 +5,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class EditStudentRecordPage {
 
-    /* Student information module */
-    @FindBy(xpath = "//span[normalize-space()='Student Information']")
-    public WebElement studentInformationModule;
-
     /* navigates to Select Details page */
     @FindBy(xpath = "(//a[normalize-space()='Student Details'])[2]")
-    public WebElement studentDetailsPage;
+    public WebElement studentDetailsModule;
 
     /* Select Class dropdown */
     @FindBy(xpath = "//select[@name='class_id']")

@@ -19,7 +19,7 @@ public class editStudentRecordStepDefinitions extends PageInitializer {
     
     @When("user selects an option on class and section dropdowns and clicks search")
     public void user_selects_an_option_on_class_and_section_dropdowns_and_clicks_search() {
-        
+        editStudentRecordPage.classDropDown()
     }
     
     @Then("user is shown confirmation message {string}")
