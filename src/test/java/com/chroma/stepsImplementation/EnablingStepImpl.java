@@ -96,11 +96,18 @@ public class EnablingStepImpl extends PageInitializer {
     }
 
      /**
-     * Use this method to for new section
+     * Use this method to for sections and class 
      * 
      * 
      */
-    public void sectionSelenium() {
-        
+    public void sectionclass(String classDropDownMenuAdmissionPage, String sectionDropDownMenuAdmissionPage ) {
+        studentDetails.stDetails.click();
+        CommonUtils.selectDropDownValue(studentAdmissionPage.classDropDownMenu, classDropDownMenuAdmissionPage);
+        CommonUtils.selectDropDownValue(studentAdmissionPage.sectionDropDownMenu, sectionDropDownMenuAdmissionPage);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
+        studentDetails.searchButton.click();
+        studentDetails.student.click();
+        CommonUtils.sleep(2000);
     }
 }

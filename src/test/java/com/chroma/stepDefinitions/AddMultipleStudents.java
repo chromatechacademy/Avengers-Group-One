@@ -9,6 +9,7 @@ import cucumber.api.java.en.When;
 public class AddMultipleStudents extends PageInitializer {
     @When("enters admission NO {string}\"")
     public void enters_admission_NO(String admissionNumber) {
+        CommonUtils.sleep(3000);
         studentAdmissionPage.admissionNumberTextBox.sendKeys(admissionNumber);
     }
 
@@ -19,12 +20,14 @@ public class AddMultipleStudents extends PageInitializer {
 
     @When("user selects Class {string}")
     public void user_selects_Class(String classDropDownMenuAdmissionPage) {
-        WebElement classDropDowns = studentDetails.selectClass;
-        CommonUtils.selectDropDownValue(classDropDowns, 1);
+        //CommonUtils.selectDropDownValue(classDropDownMenuAdmissionPage, studentAdmissionPage.classDropDownMenu);
+         WebElement classDropDowns = studentDetails.selectClass;
+         CommonUtils.selectDropDownValue(classDropDowns, 1);
     }
 
     @When("selects Section {string}")
     public void selects_Section(String sectionDropDownMenuAdmissionPage) {
+       // CommonUtils.selectDropDownValue(sectionDropDownMenuAdmissionPage, studentAdmissionPage.sectionDropDownMenu);
         WebElement sectionDropDowns = studentDetails.selectSection;
         CommonUtils.selectDropDownValue(sectionDropDowns, 1);
     }

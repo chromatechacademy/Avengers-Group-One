@@ -1,6 +1,6 @@
 Feature: Adding multiple students
 
-    @AGO-19  @Yaryna #@Progression
+    @AGO-19  @Yaryna @Progression
     Scenario Outline: Adding multiple students
         Given a user is on the CTSMS login page "https://chroma.mexil.it/site/login"
         When user logs in with username "general@teacher.com" and password "123456"
