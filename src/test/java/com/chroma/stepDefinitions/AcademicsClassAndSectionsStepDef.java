@@ -1,18 +1,7 @@
 package com.chroma.stepDefinitions;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.stepsImplementation.AcademicsClassAndSectionStepImpl;
-import com.chroma.utils.CucumberLogUtils;
-import com.chroma.web.CommonUtils;
-import com.chroma.web.JavascriptUtils;
-import com.chroma.web.WebDriverUtils;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 

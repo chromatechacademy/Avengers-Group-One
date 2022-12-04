@@ -3,9 +3,7 @@ package com.chroma.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.chroma.web.WebDriverUtils;
-import com.google.j2objc.annotations.Weak;
 
 public class ModuleVerifcationPage {
     /*

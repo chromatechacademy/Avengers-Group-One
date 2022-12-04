@@ -1,9 +1,6 @@
 package com.chroma.stepsImplementation;
 
-import static org.junit.Assert.assertArrayEquals;
-
 import org.openqa.selenium.WebElement;
-
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;

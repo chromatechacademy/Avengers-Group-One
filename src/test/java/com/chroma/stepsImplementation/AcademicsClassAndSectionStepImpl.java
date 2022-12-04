@@ -1,19 +1,10 @@
 package com.chroma.stepsImplementation;
 
 import static org.junit.Assert.assertNotEquals;
-
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.pages.AcademicsSectionsPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
-import com.chroma.web.WebDriverUtils;
-
-import cucumber.api.java.an.E;
 
 public class AcademicsClassAndSectionStepImpl extends PageInitializer {
 
