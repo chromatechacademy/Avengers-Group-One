@@ -40,5 +40,4 @@ public class StudentCategoriesPage {
     public StudentCategoriesPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-   
 }
