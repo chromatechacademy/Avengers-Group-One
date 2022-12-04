@@ -14,13 +14,11 @@ public class EnablingStepImpl extends PageInitializer {
      * 
      * 
      */
-    public void admittingStudent() {
+    public void admittingStudent(String classDropDownMenuAdmissionPage,  String sectionDropDownMenuAdmissionPage) {
         studentAdmissionPage.admissionNumberTextBox.sendKeys("3501");
         studentAdmissionPage.firstNameTextBox.sendKeys("Yaryna");
-        WebElement classDropDowns = studentDetails.selectClass;
-        CommonUtils.selectDropDownValue(classDropDowns, 1);
-        WebElement sectionDropDowns = studentDetails.selectSection;
-        CommonUtils.selectDropDownValue(sectionDropDowns, 1);
+        CommonUtils.selectDropDownValue(classDropDownMenuAdmissionPage, studentAdmissionPage.classDropDownMenu);
+        CommonUtils.selectDropDownValue(sectionDropDownMenuAdmissionPage, studentAdmissionPage.sectionDropDownMenu);
         WebElement genderDropDown = studentAdmissionPage.genderDropDownMenu;
         CommonUtils.selectDropDownValue(genderDropDown, 2);
         studentAdmissionPage.DOBDropDownCalendar.click();
@@ -38,10 +36,9 @@ public class EnablingStepImpl extends PageInitializer {
      * 
      * 
      */
-    public void studentDetails() {
+    public void studentDetails(String classDropDownMenuAdmissionPage) {
         studentDetails.stDetails.click();
-        WebElement classDropDown = studentDetails.selectClass;
-        CommonUtils.selectDropDownValue(classDropDown, 1);
+        CommonUtils.selectDropDownValue(classDropDownMenuAdmissionPage, studentAdmissionPage.classDropDownMenu);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
         studentDetails.searchButton.click();
@@ -54,10 +51,9 @@ public class EnablingStepImpl extends PageInitializer {
      * 
      * 
      */
-    public void deleteStudent() {
+    public void deleteStudent(String classDropDownMenuAdmissionPage) {
         BulkDeletePage.bulkDeleteModule.click();
-        WebElement classDropDown = studentDetails.selectClass;
-        CommonUtils.selectDropDownValue(classDropDown, 1);
+        CommonUtils.selectDropDownValue(classDropDownMenuAdmissionPage, studentAdmissionPage.classDropDownMenu);
         BulkDeletePage.selectSearchButton.click();
         BulkDeletePage.searchAdmissisonNumber.sendKeys("3501");
         BulkDeletePage.checkBoxToDelete.click();

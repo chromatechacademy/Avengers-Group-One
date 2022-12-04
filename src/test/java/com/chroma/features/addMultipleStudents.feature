@@ -1,6 +1,6 @@
 Feature: Adding multiple students
 
-    @AGO-19  @Yaryna @Progression
+    @AGO-19  @Yaryna @Regression
     Scenario Outline: Adding multiple students
         Given a user is on the "https://chroma.mexil.it/site/login" Homepage
         When user logs in with email "general@teacher.com" and password "123456"
