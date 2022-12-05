@@ -1,4 +1,5 @@
 package com.chroma.appsCommon;
+
 import com.chroma.pages.AcademicsClassPage;
 import com.chroma.pages.AcademicsSectionsPage;
 import com.chroma.pages.AddClassPage;
@@ -30,7 +31,7 @@ public class PageInitializer extends WebDriverUtils {
     public static HomeworkModulePage homeworkPage;
     public static EditStudentRecordPage editStudentRecordPage;
     public static DuplicateStudentAdmissionPage duplicateStudentAdmissionPage;
-    public static MultipleStudentsPage multipleStudentsPage ;
+    public static MultipleStudentsPage multipleStudentsPage;
     public static AcademicsClassPage academicsClassPage;
     public static AcademicsSectionsPage academicsSectionsPage;
     public static ModuleVerifcationPage moduleVerificationPage;
@@ -49,15 +50,14 @@ public class PageInitializer extends WebDriverUtils {
         homeworkPage = new HomeworkModulePage();
         editStudentRecordPage = new EditStudentRecordPage();
         duplicateStudentAdmissionPage = new DuplicateStudentAdmissionPage();
-<<<<<<< HEAD
 
-=======
+
+
         multipleStudentsPage = new MultipleStudentsPage();
         academicsClassPage = new AcademicsClassPage();
         academicsSectionsPage = new AcademicsSectionsPage();
         moduleVerificationPage = new ModuleVerifcationPage();
         navigationModulesPage= new NavigationModulesPage();
         studentInformationModulesPage = new StudentInformationModulesPage();
->>>>>>> c66c84d5ddef61e551eb0b5333dc5b67d25f75be
     }
 }
