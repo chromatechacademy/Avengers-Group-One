@@ -3,6 +3,7 @@ package com.chroma.stepDefinitions;
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
+
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -19,7 +20,7 @@ public class ClassesAndSectionStepDefinitions extends PageInitializer {
     public void navigates_to_Class_sub_module() {
         dashboardPage.classSubModule.click();
         CommonUtils.sleep(2000);
-    }    
+    }  
     @When("adds class {string} to Sample class Section")
     public void adds_class_to_Sample_class_Section(String classText) {
         addClassPage.addClassTextBox.sendKeys(classText);
@@ -40,7 +41,7 @@ public class ClassesAndSectionStepDefinitions extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
-     @Then("deletes class to rerun automated test case")
+    @Then("deletes class to rerun automated test case")
     public void deletes_class_to_rerun_automated_test_case() {
         addClassPage.rukshanRecordDeleteLink.click();
         CommonUtils.sleep(2000);

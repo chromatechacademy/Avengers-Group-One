@@ -38,5 +38,6 @@ public class PageInitializer extends WebDriverUtils {
         homeworkPage = new HomeworkModulePage();
         editStudentRecordPage = new EditStudentRecordPage();
         duplicateStudentAdmissionPage = new DuplicateStudentAdmissionPage();
+
     }
 }

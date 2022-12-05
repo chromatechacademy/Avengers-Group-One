@@ -1,6 +1,6 @@
 Feature: Classes and Section Scenarios
 
-  @AGO-11  @Rukshan
+  @AGO-11  @Rukshan @Regression
   Scenario: CTSMS - Class and Sections
     Given a user is on the "https://chroma.mexil.it/site/login" Homepage
     When user logs in with email "general@teacher.com" and password "123456"
