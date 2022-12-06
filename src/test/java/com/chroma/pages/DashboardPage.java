@@ -10,6 +10,18 @@ public class DashboardPage {
     @FindBy(xpath = "//span[normalize-space()='Chroma Tech Academy']")
     public static WebElement chromaTechAcademyText;
 
+    /* Student information */
+    @FindBy(xpath = "(//*[contains(text(),'Student Information')])[1]")
+    public WebElement studentInformationMenuButton;
+
+    /* Academics module link */
+    @FindBy(xpath = "//span[normalize-space()='Academics']")
+    public WebElement academicsModule;
+
+    /* Class sub module */
+    @FindBy(xpath = "//a[normalize-space()='Class']")
+    public WebElement classSubModule;
+
     /* Student Information Module */
     @FindBy(xpath = "//span[normalize-space()='Student Information']")
     public static WebElement studentInformationModule;
@@ -17,5 +29,4 @@ public class DashboardPage {
     public DashboardPage() {
     PageFactory.initElements(WebDriverUtils.driver, this);
     }
-
 }

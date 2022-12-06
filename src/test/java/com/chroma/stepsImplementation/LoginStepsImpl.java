@@ -16,5 +16,6 @@ public class LoginStepsImpl extends PageInitializer {
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
         loginPage.signInButton.click();
+        
     }
 }

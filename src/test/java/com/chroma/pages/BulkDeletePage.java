@@ -38,5 +38,4 @@ public class BulkDeletePage {
 
     PageFactory.initElements(WebDriverUtils.driver, this);
   }
-
 }
