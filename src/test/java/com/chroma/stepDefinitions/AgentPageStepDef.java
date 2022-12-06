@@ -1,6 +1,5 @@
 package com.chroma.stepDefinitions;
 
-
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
@@ -30,43 +29,25 @@ public class AgentPageStepDef extends PageInitializer {
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
-    /*@When("logs into the agent website with the new agents credentials {string}, {string}")
-    public void logs_into_the_agent_website_with_the_new_agents_credentials(String email, String password) {
-        WebDriverUtils.driver.get("https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/login.php");
-        CommonUtils.waitForVisibility(agentPage.userNameTextbox);
-        agentPage.userNameTextbox.sendKeys(email);
-        agentPage.passwordTextbox.sendKeys(password);
-        agentPage.loginButton.click();
-        CommonUtils.waitForVisibility(agentPage.dashboardButton);
-        WebDriverUtils.driver
-                .get("https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php");
-        agentPage.userNameTextbox.sendKeys("admin@mexil.it");
-        agentPage.passwordTextbox.sendKeys("123456");
-        agentPage.loginButton.click();
-        CommonUtils.waitForVisibility(agentPage.dashboardButton);
-        agentPage.agentsButton.click();
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
-
-    }*/
 
     @Then("the following text displays {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
-    public void the_following_text_displays(String expectedActiveText, String expectedInactiveText, String expectedAllAgentsText, String expectedName, String expectedMail,
+    public void the_following_text_displays(String expectedActiveText, String expectedInactiveText,
+            String expectedAllAgentsText, String expectedName, String expectedMail,
             String expectedContactNumber, String expectedActions, String expectedAddNow) {
-                String actualActiveText = agentPage.activeButton.getText();
-                String actualInactiveText = agentPage.inactiveButton.getText();
-                String actualAllAgentsText = agentPage.allAgentButton.getText();
-                String actualName = agentPage.nameButton.getText();
-                String actualMail = agentPage.mailButton.getText();
-                String actualContactNumber = agentPage.contactNumberButton.getText();
-                String actualActions = agentPage.actionButton.getText();
-                String actualAddNow = agentPage.addNowButton.getText();
+        String actualActiveText = agentPage.activeButton.getText();
+        String actualInactiveText = agentPage.inactiveButton.getText();
+        String actualAllAgentsText = agentPage.allAgentButton.getText();
+        String actualName = agentPage.nameButton.getText();
+        String actualMail = agentPage.mailButton.getText();
+        String actualContactNumber = agentPage.contactNumberButton.getText();
+        String actualActions = agentPage.actionButton.getText();
+        String actualAddNow = agentPage.addNowButton.getText();
         CommonUtils.waitForVisibility(agentPage.allAgentButton);
-        CommonUtils.assertEquals(expectedActiveText,actualActiveText);
-        CommonUtils.assertEquals(expectedInactiveText,actualInactiveText);
-        CommonUtils.assertEquals(expectedAllAgentsText,actualAllAgentsText);
-        CommonUtils.assertEquals(expectedName,actualName);
-        CommonUtils.assertEquals(expectedMail,actualMail);
+        CommonUtils.assertEquals(expectedActiveText, actualActiveText);
+        CommonUtils.assertEquals(expectedInactiveText, actualInactiveText);
+        CommonUtils.assertEquals(expectedAllAgentsText, actualAllAgentsText);
+        CommonUtils.assertEquals(expectedName, actualName);
+        CommonUtils.assertEquals(expectedMail, actualMail);
         CommonUtils.assertEquals(expectedContactNumber, actualContactNumber);
         CommonUtils.assertEquals(expectedActions, actualActions);
         CommonUtils.assertEquals(expectedAddNow, actualAddNow);
