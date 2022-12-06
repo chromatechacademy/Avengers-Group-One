@@ -1,22 +1,13 @@
 package com.chroma.stepDefinitions;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.pages.AgentPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
 
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.java.lu.a;
 
 public class AgentPageStepDef extends PageInitializer {
 
@@ -39,8 +30,7 @@ public class AgentPageStepDef extends PageInitializer {
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
-
-    @When("logs into the agent website with the new agents credentials {string}, {string}")
+    /*@When("logs into the agent website with the new agents credentials {string}, {string}")
     public void logs_into_the_agent_website_with_the_new_agents_credentials(String email, String password) {
         WebDriverUtils.driver.get("https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/login.php");
         CommonUtils.waitForVisibility(agentPage.userNameTextbox);
@@ -58,25 +48,28 @@ public class AgentPageStepDef extends PageInitializer {
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
 
-    }
-
-    @Then("logs into the website with the new agents credentials")
-    public void logs_into_the_website_with_the_new_agents_credentials() {
-
-    }
+    }*/
 
     @Then("the following text displays {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
-    public void the_following_text_displays(String active, String inactive, String allAgents, String name, String mail,
-            String contactNumber, String actions, String addNow) {
+    public void the_following_text_displays(String expectedActiveText, String expectedInactiveText, String expectedAllAgentsText, String expectedName, String expectedMail,
+            String expectedContactNumber, String expectedActions, String expectedAddNow) {
+                String actualActiveText = agentPage.activeButton.getText();
+                String actualInactiveText = agentPage.inactiveButton.getText();
+                String actualAllAgentsText = agentPage.allAgentButton.getText();
+                String actualName = agentPage.nameButton.getText();
+                String actualMail = agentPage.mailButton.getText();
+                String actualContactNumber = agentPage.contactNumberButton.getText();
+                String actualActions = agentPage.actionButton.getText();
+                String actualAddNow = agentPage.addNowButton.getText();
         CommonUtils.waitForVisibility(agentPage.allAgentButton);
-        Assert.assertEquals(active, agentPage.activeButton.getText().trim());
-        Assert.assertEquals(inactive, agentPage.inactiveButton.getText().trim());
-        Assert.assertEquals(allAgents, agentPage.allAgentButton.getText().trim());
-        Assert.assertEquals(name, agentPage.nameButton.getText().trim());
-        Assert.assertEquals(mail, agentPage.mailButton.getText().trim());
-        Assert.assertEquals(contactNumber, agentPage.contactNumberButton.getText().trim());
-        Assert.assertEquals(actions, agentPage.actionButton.getText().trim());
-        Assert.assertEquals(addNow, agentPage.addNowButton.getText().trim());
+        CommonUtils.assertEquals(expectedActiveText,actualActiveText);
+        CommonUtils.assertEquals(expectedInactiveText,actualInactiveText);
+        CommonUtils.assertEquals(expectedAllAgentsText,actualAllAgentsText);
+        CommonUtils.assertEquals(expectedName,actualName);
+        CommonUtils.assertEquals(expectedMail,actualMail);
+        CommonUtils.assertEquals(expectedContactNumber, actualContactNumber);
+        CommonUtils.assertEquals(expectedActions, actualActions);
+        CommonUtils.assertEquals(expectedAddNow, actualAddNow);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }

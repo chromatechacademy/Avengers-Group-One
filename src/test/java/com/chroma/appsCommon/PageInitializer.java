@@ -1,8 +1,10 @@
 package com.chroma.appsCommon;
+
 import com.chroma.pages.AgentPage;
 import com.chroma.pages.BulkDeletePage;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.LoginPage;
+
 import com.chroma.pages.StudentCategoriesPage;
 import com.chroma.pages.StudentDetailsPage;
 import com.chroma.pages.StudentAdmissionPage;
@@ -16,7 +18,6 @@ public class PageInitializer extends WebDriverUtils {
     public static StudentDetailsPage studentDetails;
     public static StudentAdmissionPage studentAdmissionPage;
     public static BulkDeletePage bulkDeletePage;
-
 
     public void initializeAllPages() {
         loginPage = new LoginPage();
