@@ -32,8 +32,8 @@ public class AgentPageStepDef extends PageInitializer {
 
     @Then("the following text displays {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
     public void the_following_text_displays(String expectedActiveText, String expectedInactiveText,
-            String expectedAllAgentsText, String expectedName, String expectedMail,
-            String expectedContactNumber, String expectedActions, String expectedAddNow) {
+        String expectedAllAgentsText, String expectedName, String expectedMail,
+        String expectedContactNumber, String expectedActions, String expectedAddNow) {
         String actualActiveText = agentPage.activeButton.getText();
         String actualInactiveText = agentPage.inactiveButton.getText();
         String actualAllAgentsText = agentPage.allAgentButton.getText();
@@ -54,5 +54,4 @@ public class AgentPageStepDef extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
-
 }
