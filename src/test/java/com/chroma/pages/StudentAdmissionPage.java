@@ -3,7 +3,6 @@ package com.chroma.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.web.WebDriverUtils;
 
@@ -60,9 +59,13 @@ public class StudentAdmissionPage extends PageInitializer {
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public WebElement saveButton;
 
-    /*Assert record saved text */
+    /* Assert record saved text */
     @FindBy(xpath = "(//div[@class='alert alert-success'])[1]")
     public WebElement recordSavedAssertion;
+
+    /* Assert duplicate student admission error */
+    @FindBy(xpath = "//p[contains(text(),'The Admission No field must contain a unique value')]")
+    public WebElement expectedDuplicateStudentErrorMessage;
 
     public StudentAdmissionPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

@@ -21,6 +21,8 @@ public class LoginStepDefinitions extends PageInitializer {
     public void user_logs_in_with_email_and_password(String username, String password) {
         LoginStepsImpl.login(username, password);
         CommonUtils.sleep(2000);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
     @Then("user is directed to dashboard page and sees {string} text")
