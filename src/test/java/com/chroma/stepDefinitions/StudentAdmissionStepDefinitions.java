@@ -98,18 +98,12 @@ public class StudentAdmissionStepDefinitions extends PageInitializer {
 
     @Then("student is admitted and {string} is displayed")
     public void student_is_admitted_and_is_displayed(String recordSavedSuccessfullyText) {
-<<<<<<< HEAD
-        CommonUtils.assertEquals(recordSavedSuccessfullyText, studentAdmissionPage.recordSavedAssertion.getText());
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
-=======
         String studentAdmittedAssertion = studentAdmissionPage.recordSavedAssertion.getText();
         CommonUtils.assertEquals(recordSavedSuccessfullyText, studentAdmittedAssertion);
         if(!ConfigReader.getPropertyValue("browser").equalsIgnoreCase("mobile")){
             CucumberLogUtils.logScreenShot();
             CucumberLogUtils.logExtentScreenshot();
         }     
->>>>>>> d2dc45d1078c5a19180df4af847251619b6a5a97
     }
 
     @When("selects Bulk Delete from the Student Information module")

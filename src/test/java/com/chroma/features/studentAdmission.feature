@@ -1,11 +1,7 @@
 Feature: CTSMS - Student Admission
 As a Chroma Tech Academy faculty member, I want to be able to admit a student via the Student Admission module.
 
-<<<<<<< HEAD
-@Ayla @AGO12 @Regression
-=======
   @Ayla @AGO12 @Regression @Yaryna @AGO23 
->>>>>>> d2dc45d1078c5a19180df4af847251619b6a5a97
   Scenario: AGO-12 CTSMS-Student Admission
     Given a user is on the CTSMS login page "https://chroma.mexil.it/site/login"
     When user logs in with username "general@teacher.com" and password "123456"
