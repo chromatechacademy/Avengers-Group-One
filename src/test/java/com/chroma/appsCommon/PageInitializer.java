@@ -12,6 +12,8 @@ import com.chroma.pages.LoginPage;
 import com.chroma.pages.ModuleVerifcationPage;
 import com.chroma.pages.MultipleStudentsPage;
 import com.chroma.pages.NavigationModulesPage;
+import com.chroma.pages.ProjectsPage;
+import com.chroma.pages.RealEstateHomePage;
 import com.chroma.pages.StudentAdmissionPage;
 import com.chroma.pages.StudentCategoriesPage;
 import com.chroma.pages.StudentDetailsPage;
@@ -38,6 +40,8 @@ public class PageInitializer extends WebDriverUtils {
     public static NavigationModulesPage navigationModulesPage;
     public static StudentInformationModulesPage studentInformationModulesPage;
     public static AgentPage agentPage;
+    public static RealEstateHomePage realEstateHomePage;
+    public static ProjectsPage projectsPage;
 
     public void initializeAllPages() {
         loginPage = new LoginPage();
@@ -58,5 +62,7 @@ public class PageInitializer extends WebDriverUtils {
         navigationModulesPage= new NavigationModulesPage();
         studentInformationModulesPage = new StudentInformationModulesPage();
         agentPage= new AgentPage();
+        realEstateHomePage = new RealEstateHomePage();
+        projectsPage = new ProjectsPage();
     }
 }
