@@ -1,11 +1,7 @@
 package com.chroma.stepDefinitions;
 
-import org.openqa.selenium.WebElement;
-
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.stepsImplementation.AcademicsClassAndSectionStepImpl;
-import com.chroma.web.CommonUtils;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -65,6 +61,7 @@ public class AcademicsClassAndSectionsStepDef extends PageInitializer {
     }
 
     /* UPDATE */
+
     // @When("user sees classes {string}")
     // public void user_sees_classes(String expectedClasses) {
     // AcademicsClassAndSectionStepImpl.classListAssert(expectedClasses);
