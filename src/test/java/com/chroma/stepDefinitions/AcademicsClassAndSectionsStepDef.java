@@ -1,12 +1,15 @@
 package com.chroma.stepDefinitions;
 
+import org.openqa.selenium.WebElement;
+
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.stepsImplementation.AcademicsClassAndSectionStepImpl;
+import com.chroma.web.CommonUtils;
+
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class AcademicsClassAndSectionsStepDef extends PageInitializer {
-
     // After logging in, click on Academic module dropdown on the left side
     @When("user clicks on Academic module while on the Dashboard page")
     public void user_clicks_on_Academic_module_while_on_the_Dashboard_page() {
@@ -59,5 +62,33 @@ public class AcademicsClassAndSectionsStepDef extends PageInitializer {
     @Then("the user can also delete the Section")
     public void the_user_can_also_delete_the_Section() {
         AcademicsClassAndSectionStepImpl.deletingCreatedSections();
+    }
+
+    /* UPDATE */
+    // @When("user sees classes {string}")
+    // public void user_sees_classes(String expectedClasses) {
+    // AcademicsClassAndSectionStepImpl.classListAssert(expectedClasses);
+    // }
+
+    // @Then("user sees sections {string}")
+    // public void user_sees_sections(String expectedSections) {
+    // AcademicsClassAndSectionStepImpl.sectionListAssert(expectedSections);
+    // }
+
+    @When("user sees classes {string} and {string}")
+    public void user_sees_classes_and(String expectedClassOne, String expectedClassTwo) {
+        AcademicsClassAndSectionStepImpl.classListAssert(expectedClassOne, expectedClassTwo);
+    }
+
+    @Then("user sees sections {string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string}")
+    public void user_sees_sections(String expectedSectionOne, String expectedSectionTwo, String expectedSectionThree,
+            String expectedSectionFour, String expectedSectionFive, String expectedSectionSix,
+            String expectedSectionSeven, String expectedSectionEight, String expectedSectionNine,
+            String expectedSectionTen, String expectedSectionEleven, String expectedSectionTwelve,
+            String expectedSectionThirteen, String expectedSectionFourteen) {
+        AcademicsClassAndSectionStepImpl.sectionListAssert(expectedSectionOne, expectedSectionTwo, expectedSectionThree,
+                expectedSectionFour, expectedSectionFive, expectedSectionSix, expectedSectionSeven,
+                expectedSectionEight, expectedSectionNine, expectedSectionTen, expectedSectionEleven,
+                expectedSectionTwelve, expectedSectionThirteen, expectedSectionFourteen);
     }
 }

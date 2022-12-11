@@ -36,6 +36,20 @@ public class AcademicsClassPage {
     @FindBy(xpath = "//*[@class='mailbox-name']")
     public List<WebElement> listOfClassNames;
 
+    /* UPDATE */
+
+    /* Locator for list of classes and sections */
+    @FindBy(xpath = "//*[@role='row']")
+    public List<WebElement> listOfClassNamesAndSections;
+
+    /* Cyber Security Class in Class List*/
+    @FindBy(xpath = "//td[normalize-space()='Cyber Security']")
+    public WebElement cyberSecurityClass;
+
+    /* SDET Class in Class List */
+    @FindBy(xpath = "//td[normalize-space()='SDET']")
+    public WebElement sdetClass;
+    
     public AcademicsClassPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }

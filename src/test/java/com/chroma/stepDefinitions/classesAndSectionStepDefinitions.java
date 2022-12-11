@@ -12,12 +12,11 @@ public class ClassesAndSectionStepDefinitions extends PageInitializer {
     public void navigates_to_Academics_module() {
         dashboardPage.academicsModule.click();
         CommonUtils.sleep(2000);
-        CucumberLogUtils.logExtentScreenshot();
-        CucumberLogUtils.logScreenShot();
+
     }
 
-    @When("navigates to Class sub module")
-    public void navigates_to_Class_sub_module() {
+    @When("navigates to Class module")
+    public void navigates_to_Class_module() {
         dashboardPage.classSubModule.click();
         CommonUtils.sleep(2000);    
     }

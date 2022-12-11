@@ -73,4 +73,38 @@ public class AcademicsClassAndSectionStepImpl extends PageInitializer {
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
+
+    /* UPDATE */
+    
+    public static void classListAssert(String expectedClassOne, String expectedClassTwo) {
+        String[] expectedClasses = { expectedClassOne, expectedClassTwo };
+        for (WebElement actualClassName : academicsClassPage.listOfClassNamesAndSections) {
+            String e = actualClassName.getText();
+            for (String expectedClass : expectedClasses) {
+                String c = expectedClass;
+                CommonUtils.assertEquals(e, c);
+            }
+        }
+    }
+
+    public static void sectionListAssert(String expectedSectionOne, String expectedSectionTwo,
+            String expectedSectionThree,
+            String expectedSectionFour, String expectedSectionFive, String expectedSectionSix,
+            String expectedSectionSeven, String expectedSectionEight, String expectedSectionNine,
+            String expectedSectionTen, String expectedSectionEleven, String expectedSectionTwelve,
+            String expectedSectionThirteen, String expectedSectionFourteen) {
+        String[] expectedSections = { expectedSectionOne, expectedSectionTwo, expectedSectionThree,
+                expectedSectionFour, expectedSectionFive, expectedSectionSix,
+                expectedSectionSeven, expectedSectionEight, expectedSectionNine,
+                expectedSectionTen, expectedSectionEleven, expectedSectionTwelve,
+                expectedSectionThirteen, expectedSectionFourteen };
+        for (WebElement actualSectionName : academicsClassPage.listOfClassNamesAndSections) {
+            String e = actualSectionName.getText();
+            for (String expectedSection : expectedSections) {
+                String c = expectedSection;
+                CommonUtils.assertEquals(e, c);
+            }
+        }
+    }
+
 }
