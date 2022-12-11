@@ -2,6 +2,7 @@ package com.chroma.appsCommon;
 import com.chroma.pages.AcademicsClassPage;
 import com.chroma.pages.AcademicsSectionsPage;
 import com.chroma.pages.AddClassPage;
+import com.chroma.pages.AgentPage;
 import com.chroma.pages.BulkDeletePage;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.DuplicateStudentAdmissionPage;
@@ -36,6 +37,7 @@ public class PageInitializer extends WebDriverUtils {
     public static ModuleVerifcationPage moduleVerificationPage;
     public static NavigationModulesPage navigationModulesPage;
     public static StudentInformationModulesPage studentInformationModulesPage;
+    public static AgentPage agentPage;
 
     public void initializeAllPages() {
         loginPage = new LoginPage();
@@ -55,5 +57,6 @@ public class PageInitializer extends WebDriverUtils {
         moduleVerificationPage = new ModuleVerifcationPage();
         navigationModulesPage= new NavigationModulesPage();
         studentInformationModulesPage = new StudentInformationModulesPage();
+        agentPage= new AgentPage();
     }
 }
