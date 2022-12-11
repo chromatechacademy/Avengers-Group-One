@@ -1,7 +1,11 @@
 Feature: CTSMS - Student Admission
 As a Chroma Tech Academy faculty member, I want to be able to admit a student via the Student Admission module.
 
+<<<<<<< HEAD
+@Ayla @AGO12 @Regression
+=======
   @Ayla @AGO12 @Regression @Yaryna @AGO23 
+>>>>>>> d2dc45d1078c5a19180df4af847251619b6a5a97
   Scenario: AGO-12 CTSMS-Student Admission
     Given a user is on the CTSMS login page "https://chroma.mexil.it/site/login"
     When user logs in with username "general@teacher.com" and password "123456"
@@ -10,14 +14,14 @@ As a Chroma Tech Academy faculty member, I want to be able to admit a student vi
     And enters "321" to Admission No text box
     And enters "44411" to Roll Number text box
     And selects "SDET" from the Class drop down menu
-    And selects the "Database Testing" option from the Section drop down menu
-    And enters "Chroma" to the First Name text box
+    And selects the "Database Testing" option from the Section drop down menu 
+    And enters "Ayla G. " to the First Name text box 
     And selects "Female" from the Gender drop down menu
     And selects date from the Date of Birth drop down calendar
     And selects the Father radio button form the If Guardian Is section
-    And enters "Chroma Tech Senior" to the Guardian Name text box
-    And enters "224-279-6543" to the Guardian Phone text box
-    And clicks the Save button
+    And enters "The father" to the Guardian Name text box
+    And enters "000-111-0000" to the Guardian Phone text box
+    And clicks the Save button 
     Then student is admitted and "Record Saved Successfully" is displayed
     And selects Bulk Delete from the Student Information module
     And selects the "SDET" option from the Class drop down menu

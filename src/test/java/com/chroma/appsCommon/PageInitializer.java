@@ -5,13 +5,17 @@ import com.chroma.pages.AddClassPage;
 import com.chroma.pages.AgentPage;
 import com.chroma.pages.BulkDeletePage;
 import com.chroma.pages.DashboardPage;
+import com.chroma.pages.FeesCollectionModulePage;
 import com.chroma.pages.DuplicateStudentAdmissionPage;
 import com.chroma.pages.EditStudentRecordPage;
 import com.chroma.pages.HomeworkModulePage;
+import com.chroma.pages.HumanResourceModulePage;
 import com.chroma.pages.LoginPage;
 import com.chroma.pages.ModuleVerifcationPage;
 import com.chroma.pages.MultipleStudentsPage;
 import com.chroma.pages.NavigationModulesPage;
+import com.chroma.pages.RealEstateDashboardPage;
+import com.chroma.pages.RealEstateLoginPage;
 import com.chroma.pages.StudentAdmissionPage;
 import com.chroma.pages.StudentCategoriesPage;
 import com.chroma.pages.StudentDetailsPage;
@@ -29,6 +33,8 @@ public class PageInitializer extends WebDriverUtils {
     public static BulkDeletePage bulkDeletePage;
     public static EnablingStepImpl enablingStepImpl;
     public static HomeworkModulePage homeworkPage;
+    public static HumanResourceModulePage humanResourceModulePage;
+    public static FeesCollectionModulePage feesCollectionModulePage;
     public static EditStudentRecordPage editStudentRecordPage;
     public static DuplicateStudentAdmissionPage duplicateStudentAdmissionPage;
     public static MultipleStudentsPage multipleStudentsPage ;
@@ -38,6 +44,8 @@ public class PageInitializer extends WebDriverUtils {
     public static NavigationModulesPage navigationModulesPage;
     public static StudentInformationModulesPage studentInformationModulesPage;
     public static AgentPage agentPage;
+    public static RealEstateLoginPage realEstateLoginPage;
+    public static RealEstateDashboardPage realEstateDashboardPage;
 
     public void initializeAllPages() {
         loginPage = new LoginPage();
@@ -49,6 +57,8 @@ public class PageInitializer extends WebDriverUtils {
         bulkDeletePage = new BulkDeletePage();
         enablingStepImpl = new EnablingStepImpl();
         homeworkPage = new HomeworkModulePage();
+        humanResourceModulePage = new HumanResourceModulePage();
+        feesCollectionModulePage = new FeesCollectionModulePage();
         editStudentRecordPage = new EditStudentRecordPage();
         duplicateStudentAdmissionPage = new DuplicateStudentAdmissionPage();
         multipleStudentsPage = new MultipleStudentsPage();
@@ -58,5 +68,8 @@ public class PageInitializer extends WebDriverUtils {
         navigationModulesPage= new NavigationModulesPage();
         studentInformationModulesPage = new StudentInformationModulesPage();
         agentPage= new AgentPage();
+        realEstateLoginPage = new RealEstateLoginPage();
+        realEstateDashboardPage = new RealEstateDashboardPage();
+        
     }
 }

@@ -5,6 +5,18 @@ import com.chroma.pages.DashboardPage;
 import com.chroma.web.CommonUtils;
 
 public class StudentAdmissionStepImpl extends PageInitializer {
+    /**
+     * Use this method to admit a new student
+     * 
+     * @param admissionNumber
+     * @param rollNumber
+     * @param classDropDownMenuAdmissionPage
+     * @param sectionDropDownMenuAdmissionPage
+     * @param firstName
+     * @param femaleGenderDropDown
+     * @param guardianName
+     * @param guardianPhoneNum
+     */
     public static void studentAdmission(String admissionNumber, String rollNumber,
             String classDropDownMenuAdmissionPage, String sectionDropDownMenuAdmissionPage, String firstName,
             String femaleGenderDropDown, String guardianName, String guardianPhoneNum) {
@@ -22,7 +34,7 @@ public class StudentAdmissionStepImpl extends PageInitializer {
         studentAdmissionPage.guardianNameTextBox.sendKeys(guardianName);
         studentAdmissionPage.guardianPhoneTextBox.sendKeys(guardianPhoneNum);
         studentAdmissionPage.saveButton.click();
-        CommonUtils.sleep(2000);
+        CommonUtils.waitForVisibility(studentAdmissionPage.recordSavedAssertion);
     }
 
 }

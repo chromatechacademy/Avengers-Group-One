@@ -1,7 +1,7 @@
 package com.chroma.stepDefinitions;
 
 import org.openqa.selenium.By;
-import com.chroma.pages.HomeworkModulePage;
+import com.chroma.appsCommon.PageInitializer;
 import com.chroma.stepsImplementation.LoginStepsImpl;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
@@ -10,7 +10,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class HomeworkModuleStepDefinitions {
+public class HomeworkModuleStepDefinitions extends PageInitializer {
     @Given("a user is at the CTSMS login page {string}")
     public void a_user_is_at_the_CTSMS_login_page(String url) {
         WebDriverUtils.driver.get(url);
@@ -28,10 +28,11 @@ public class HomeworkModuleStepDefinitions {
     }
 
     @Then("{string} displays")
-    public static void displays(String expectedModuleText) {
-        String addHomeworkDisplays = HomeworkModulePage.addHomeworkModuleTextDisplays.getText();
-        CommonUtils.assertEquals(expectedModuleText, addHomeworkDisplays);
+    public void displays(String expectedModuleText) {
+        String actualModuleText = homeworkPage.addHomeworkModuleTextDisplays.getText();
+        CommonUtils.assertEquals(expectedModuleText, actualModuleText);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
+
 }
