@@ -136,5 +136,4 @@ public class StudentAdmissionStepDefinitions extends PageInitializer {
     public void clicks_the_OK_button_in_the_pop_up_window() {
         WebDriverUtils.driver.switchTo().alert().accept();
     }
-
 }

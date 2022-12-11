@@ -7,8 +7,8 @@ As a Chroma Tech Academy faculty member, I want to be able to admit a student vi
     When user logs in with username "general@teacher.com" and password "123456"
     And navigates to the Student Information drop down module
     And selects the Student Admission option
-    And enters "321" to Admission No text box 
-    And enters "44411" to Roll Number text box 
+    And enters "321" to Admission No text box
+    And enters "44411" to Roll Number text box
     And selects "SDET" from the Class drop down menu
     And selects the "Database Testing" option from the Section drop down menu 
     And enters "Ayla G. " to the First Name text box 
@@ -27,22 +27,3 @@ As a Chroma Tech Academy faculty member, I want to be able to admit a student vi
     And selects the check box for the desired student
     And clicks the Delete button
     Then clicks the OK button in the pop up window
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   

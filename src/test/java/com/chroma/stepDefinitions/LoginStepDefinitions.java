@@ -1,4 +1,5 @@
 package com.chroma.stepDefinitions;
+
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.stepsImplementation.LoginStepsImpl;
 import com.chroma.utils.CucumberLogUtils;
@@ -28,6 +29,31 @@ public class LoginStepDefinitions extends PageInitializer {
         CommonUtils.assertEquals(successfulLoginText, isChromaTechTextDisplayed);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
+    }
+
+    @Given("an admin user is on the Real Estate login page {string}")
+    public void an_admin_user_is_on_the_Real_Estate_login_page(String url) {
+        WebDriverUtils.driver.get(url);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
+}
+
+@When("user logs in with username and password {string} {string}")
+public void user_logs_in_with_username_and_password(String username, String password) throws InterruptedException {
+        agentPage.userNameTextbox.sendKeys(username);
+        agentPage.passwordTextbox.sendKeys(password);
+        agentPage.loginButton.click();
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
+    }
+
+    @Then("user is navigated to the agents page")
+    public void user_is_navigated_to_the_agents_page() {
+        CommonUtils.waitForClickability(agentPage.agentsButton);
+        agentPage.agentsButton.click();
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
+
     }
 
     @Then("user sees {string} message")

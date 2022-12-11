@@ -66,5 +66,4 @@ public class StudentAdmissionPage extends PageInitializer {
     public StudentAdmissionPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-
 }

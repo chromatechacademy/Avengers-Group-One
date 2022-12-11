@@ -11,7 +11,7 @@ Teachers Rating
 Department
 Designation
 
-  @Ayla @AGO9 @Smoke
+  @Ayla @AGO9 @Regression
   Scenario: AGO-9 CTSMS-Human Resource Module
     Given a user is on the CTSMS login page "https://chroma.mexil.it/site/login"
     When user logs in with username "general@teacher.com" and password "123456"
