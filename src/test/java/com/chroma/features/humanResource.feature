@@ -11,10 +11,10 @@ Teachers Rating
 Department
 Designation
 
-  @Ayla @AGO-9 @Smoke
+  @Ayla @AGO9 @Smoke
   Scenario: AGO-9 CTSMS-Human Resource Module
     Given a user is on the CTSMS login page "https://chroma.mexil.it/site/login"
     When user logs in with username "general@teacher.com" and password "123456"
     And navigates to the Human Resources dropdown module
-    Then "Staff Directory", "Staff Attendance", "Payroll module", "Approve Leave", "Apply Leave", "Leave Type", "Teachers Rating", "Department", "Designation", module displays
+    Then modules "Staff Directory", "Staff Attendance", "Payroll module", "Approve Leave", "Apply Leave", "Leave Type", "Teachers Rating", "Department", "Designation" displays
     

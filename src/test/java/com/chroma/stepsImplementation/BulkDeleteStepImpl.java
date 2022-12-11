@@ -6,6 +6,13 @@ import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
 
 public class BulkDeleteStepImpl extends PageInitializer {
+    /**
+     * Use this method to bulk delete student(s)
+     * 
+     * @param classDropDownMenuBulkDeletePage
+     * @param sectionDropDownMenuBulkDeletePage
+     * @param admissionNumber
+     */
     public static void bulkDelete(String classDropDownMenuBulkDeletePage, String sectionDropDownMenuBulkDeletePage,
             String admissionNumber) {
         BulkDeletePage.bulkDeleteModule.click();

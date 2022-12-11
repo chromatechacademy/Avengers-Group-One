@@ -8,6 +8,10 @@ import com.chroma.web.WebDriverUtils;
 
 public class HumanResourceModulePage extends PageInitializer {
 
+    /* Human Resource Module Button */
+    @FindBy(xpath = "//span[normalize-space()='Human Resource']")
+    public WebElement humanResourceModuleButton;
+
     /* Staff Directory module button */
     @FindBy(xpath = "//a[normalize-space()='Staff Directory']")
     public WebElement actualStaffDirectoryModule;
@@ -16,31 +20,31 @@ public class HumanResourceModulePage extends PageInitializer {
     @FindBy(xpath = "//a[normalize-space()='Staff Attendance']")
     public WebElement actualStaffAttendanceModule;
 
-    /* NULLNYLGKIADGLKDSGNF */
+    /* Payroll module button */
     @FindBy(xpath = "//a[normalize-space()='Payroll']")
     public WebElement actualPayrollModule;
 
-    /* NULLNYLGKIADGLKDSGNF */
+    /* Approve Leave Request module button */
     @FindBy(xpath = "//a[normalize-space()='Approve Leave Request']")
     public WebElement actualApproveLeaveRequestModule;
 
-    /* NULLNYLGKIADGLKDSGNF */
+    /* Apply Leave module button */
     @FindBy(xpath = "//a[normalize-space()='Apply Leave']")
     public WebElement actualApplyLeaveModule;
 
-    /* NULLNYLGKIADGLKDSGNF */
+    /* Leave Type module button */
     @FindBy(xpath = "//a[normalize-space()='Leave Type']")
     public WebElement actualLeaveTypeModule;
 
-    /* NULLNYLGKIADGLKDSGNF */
+    /* Teachers Rating module button */
     @FindBy(xpath = "//a[normalize-space()='Teachers Rating']")
     public WebElement actualTeachersRatingModule;
 
-    /* NULLNYLGKIADGLKDSGNF */
+    /* Department module button */
     @FindBy(xpath = "//a[normalize-space()='Department']")
     public WebElement actualDepartmentModule;
 
-    /* NULLNYLGKIADGLKDSGNF */
+    /* Designation module button */
     @FindBy(xpath = "//a[normalize-space()='Designation']")
     public WebElement actualDesignationModule;
 
