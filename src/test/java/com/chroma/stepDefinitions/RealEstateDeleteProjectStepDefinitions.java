@@ -83,6 +83,7 @@ public class RealEstateDeleteProjectStepDefinitions extends PageInitializer {
     @When("user enters {string} in the Reservation number text box")
     public void user_enters_in_the_Reservation_number_text_box(String reservationNumber) {
         newProjectPage.reservationNumber.sendKeys(reservationNumber);
+        CommonUtils.scrollIntoView(newProjectPage.nextButton);
     }
 
     @When("user enters {string} in the Street Number text box")
@@ -123,6 +124,10 @@ public class RealEstateDeleteProjectStepDefinitions extends PageInitializer {
     @When("user enters {string} in the Longitude text box")
     public void user_enters_in_the_Longitude_text_box(String longitude) {
         newProjectPage.longitude.sendKeys(longitude);
-        CommonUtils.sleep(2000);
+    }
+
+    @When("user clicks Next button")
+    public void user_clicks_Next_button() {
+        newProjectPage.nextButton.click();
     }
 }

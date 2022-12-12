@@ -32,3 +32,4 @@ Feature: Real Estate - Delete a Project AGO50
     And user enters "USA" in the Country text box
     And user enters "40.7484° N" in the Latitude text box
     And user enters "73.9857° W" in the Longitude text box
+    Then user clicks Next button

@@ -4,6 +4,7 @@ import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.BulkDeletePage;
 import com.chroma.pages.DashboardPage;
 import com.chroma.stepsImplementation.LoginStepsImpl;
+import com.chroma.utils.ConfigReader;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
@@ -25,7 +26,12 @@ public class StudentAdmissionStepDefinitions extends PageInitializer {
 
     @When("navigates to the Student Information drop down module")
     public void navigates_to_the_Student_Information_drop_down_module() {
+        if (ConfigReader.getPropertyValue("browser").equalsIgnoreCase("mobile")) {
+            CommonUtils.waitForClickability(dashboardPage.hamBurgerMenu);
+            dashboardPage.hamBurgerMenu.click();
+        }
         DashboardPage.studentInformationModule.click();
+
     }
 
     @When("selects the Student Admission option")
@@ -94,8 +100,10 @@ public class StudentAdmissionStepDefinitions extends PageInitializer {
     public void student_is_admitted_and_is_displayed(String recordSavedSuccessfullyText) {
         String studentAdmittedAssertion = studentAdmissionPage.recordSavedAssertion.getText();
         CommonUtils.assertEquals(recordSavedSuccessfullyText, studentAdmittedAssertion);
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
+        if (!ConfigReader.getPropertyValue("browser").equalsIgnoreCase("mobile")) {
+            CucumberLogUtils.logScreenShot();
+            CucumberLogUtils.logExtentScreenshot();
+        }
     }
 
     @When("selects Bulk Delete from the Student Information module")

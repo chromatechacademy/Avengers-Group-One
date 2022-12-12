@@ -10,6 +10,9 @@ public class DashboardPage {
     @FindBy(xpath = "//span[normalize-space()='Chroma Tech Academy']")
     public WebElement chromaTechAcademyText;
 
+    @FindBy(xpath = "//a[@role='button']")
+    public WebElement hamBurgerMenu;
+
     /* Student information */
     @FindBy(xpath = "(//*[contains(text(),'Student Information')])[1]")
     public WebElement studentInformationMenuButton;

@@ -38,13 +38,14 @@ public class LoginStepDefinitions extends PageInitializer {
         WebDriverUtils.driver.get(url);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
-}
+    }
 
-@When("user logs in with username and password {string} {string}")
-public void user_logs_in_with_username_and_password(String username, String password) throws InterruptedException {
+    @When("user logs in with username and password {string} {string}")
+    public void user_logs_in_with_username_and_password(String username, String password) throws InterruptedException {
         agentPage.userNameTextbox.sendKeys(username);
         agentPage.passwordTextbox.sendKeys(password);
         agentPage.loginButton.click();
+        CommonUtils.sleep(2000);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
@@ -55,7 +56,6 @@ public void user_logs_in_with_username_and_password(String username, String pass
         agentPage.agentsButton.click();
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
-
     }
 
     @Then("user sees {string} message")

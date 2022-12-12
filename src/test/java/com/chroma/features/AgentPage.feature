@@ -4,7 +4,7 @@ Feature: Agent page features
   Scenario: Creating a new agent
     Given an admin user is on the Real Estate login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php"
     When user logs in with username and password "admin@mexil.it" "123456"
-    And verifies a unique agent has been added wih "Ishaq", "chy", "7339992341", "IshaqIsrar@email.com", "passWord"
+    And verifies a unique agent has been added wih "Ishaq", "chy", "7339992341", "agent1@email.com", "passWord"
 
   @AGO-44 @Reshad @Regression
   Scenario: Validate agent module text
